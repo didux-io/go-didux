@@ -147,6 +147,7 @@ var (
 		utils.TestnetFlag,
 		utils.RinkebyFlag,
 		utils.SportFlag,
+		utils.OnpremiseFlag,
 		utils.VMEnableDebugFlag,
 		utils.NetworkIdFlag,
 		utils.EthStatsURLFlag,

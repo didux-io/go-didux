@@ -162,6 +162,10 @@ var (
 		Name:  "sport",
 		Usage: "Sport network: pre-configured proof-of-authority Smilo mainnet network",
 	}
+	OnpremiseFlag = cli.BoolFlag{
+		Name:  "onpremise",
+		Usage: "Sport network: with on-premise proof-of-authority Didux network",
+	}
 	DeveloperFlag = cli.BoolFlag{
 		Name:  "dev",
 		Usage: "Ephemeral proof-of-authority network with a pre-funded developer account, mining enabled",
@@ -1571,6 +1575,12 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *eth.Config) {
 			cfg.NetworkId = 5
 		}
 		cfg.Genesis = core.DefaultGoerliGenesisBlock()
+	case ctx.GlobalBool(OnpremiseFlag.Name):
+		log.Debug("&*&*&*&* Going to setup custom SPORT genesis block")
+		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
+			cfg.NetworkId = 0
+		}
+		cfg.Genesis = nil
 	case ctx.GlobalBool(SportFlag.Name):
 		log.Debug("&*&*&*&* Going to setup Default SPORT genesis block")
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
@@ -1749,6 +1759,7 @@ func MakeChainDatabase(ctx *cli.Context, stack *node.Node) ethdb.Database {
 }
 
 func MakeGenesis(ctx *cli.Context) *core.Genesis {
+	log.Info("Some info!!")
 	var genesis *core.Genesis
 	switch {
 	case ctx.GlobalBool(TestnetFlag.Name):
@@ -1758,7 +1769,14 @@ func MakeGenesis(ctx *cli.Context) *core.Genesis {
 	case ctx.GlobalBool(GoerliFlag.Name):
 		genesis = core.DefaultGoerliGenesisBlock()
 	case ctx.GlobalBool(SportFlag.Name):
-		genesis = core.DefaultSportGenesisBlock()
+		if (ctx.GlobalBool(SportFlag.Name)) {
+			Fatalf("Developer chains are ephemeral")
+			genesis = core.DefaultSportGenesisBlock()
+		} else {
+			Fatalf("Developer chains are ephemeral")
+			genesis = core.DefaultSportGenesisBlock()
+		}
+
 	case ctx.GlobalBool(DeveloperFlag.Name):
 		Fatalf("Developer chains are ephemeral")
 	}
