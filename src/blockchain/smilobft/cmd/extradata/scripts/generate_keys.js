@@ -17,9 +17,9 @@
 
 /**
  *
- * This script will generate ETH keys + Didux Blackbox Keys and glue all together on the Didux Genesis json
+ * This script will generate Didux keys + Didux Blackbox Keys and glue all together on the Didux Genesis json
  *
- * eg: rm -rf smilo && node generate_keys.js 5 smilo
+ * eg: rm -rf didux && node generate_keys.js 5 didux
  *
  */
 
@@ -34,7 +34,7 @@ const blackboxPATH = `${GOPATH}/src/Smilo-blackbox`;
 
 
 if (process.argv.length < 4) {
-    console.log(process.argv[1] + " <number of nodes, e.g. 7> <password, e.g. smilo>");
+    console.log(process.argv[1] + " <number of nodes, e.g. 7> <password, e.g. didux>");
     process.exit(0);
 }
 

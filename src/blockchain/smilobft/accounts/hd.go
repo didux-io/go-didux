@@ -57,7 +57,7 @@ var LegacyLedgerBaseDerivationPath = DerivationPath{0x80000000 + 44, 0x80000000 
 // from https://github.com/ethereum/EIPs/issues/84, albeit it's not set in stone
 // yet whether accounts should increment the last component or the children of
 // that.
-// The root path for Smilo is m/44'/20200101'/0'/0
+// The root path for Didux is m/44'/20200101'/0'/0
 // Following the same steps as Ethereum, We will go with the simpler approach of incrementing the last component.
 
 type DerivationPath []uint32
