@@ -26,19 +26,19 @@ import (
 )
 
 // DefaultRootDerivationPath is the root path to which custom derivation endpoints
-// are appended. As such, the first account will be at m/44'/20080914'/0'/0, the second
-// at m/44'/20080914'/0'/1, etc.
-var DefaultRootDerivationPath = DerivationPath{0x80000000 + 44, 0x80000000 + 20080914, 0x80000000 + 0, 0}
+// are appended. As such, the first account will be at m/44'/20200101'/0'/0, the second
+// at m/44'/20200101'/0'/1, etc.
+var DefaultRootDerivationPath = DerivationPath{0x80000000 + 44, 0x80000000 + 20200101, 0x80000000 + 0, 0}
 
 // DefaultBaseDerivationPath is the base path from which custom derivation endpoints
-// are incremented. As such, the first account will be at m/44'/20080914'/0'/0/0, the second
-// at m/44'/20080914'/0'/0/1, etc.
-var DefaultBaseDerivationPath = DerivationPath{0x80000000 + 44, 0x80000000 + 20080914, 0x80000000 + 0, 0, 0}
+// are incremented. As such, the first account will be at m/44'/20200101'/0'/0/0, the second
+// at m/44'/20200101'/0'/0/1, etc.
+var DefaultBaseDerivationPath = DerivationPath{0x80000000 + 44, 0x80000000 + 20200101, 0x80000000 + 0, 0, 0}
 
 // LegacyLedgerBaseDerivationPath is the base path from which custom derivation endpoints
-// are incremented. As such, the first account will be at m/44'/20080914'/0'/0, the second
-// at m/44'/20080914'/0'/1, etc.
-var LegacyLedgerBaseDerivationPath = DerivationPath{0x80000000 + 44, 0x80000000 + 20080914, 0x80000000 + 0, 0}
+// are incremented. As such, the first account will be at m/44'/20200101'/0'/0, the second
+// at m/44'/20200101'/0'/1, etc.
+var LegacyLedgerBaseDerivationPath = DerivationPath{0x80000000 + 44, 0x80000000 + 20200101, 0x80000000 + 0, 0}
 
 // DerivationPath represents the computer friendly version of a hierarchical
 // deterministic wallet account derivation path.
@@ -57,10 +57,8 @@ var LegacyLedgerBaseDerivationPath = DerivationPath{0x80000000 + 44, 0x80000000 
 // from https://github.com/ethereum/EIPs/issues/84, albeit it's not set in stone
 // yet whether accounts should increment the last component or the children of
 // that.
-// The root path for Smilo is m/44'/20080914'/0'/0
+// The root path for Didux is m/44'/20200101'/0'/0
 // Following the same steps as Ethereum, We will go with the simpler approach of incrementing the last component.
-//
-// 20080914 - It was announced that L.B. would file for bankruptcy. In the earlier episodes, JP.M.C. acquired B.S.
 
 type DerivationPath []uint32
 

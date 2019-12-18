@@ -1,3 +1,4 @@
+// Copyright 2020 The go-didux Authors
 // Copyright 2019 The go-smilo Authors
 // This file is part of the go-smilo library.
 //
@@ -47,17 +48,17 @@ func GetValidTXGasPrice(ctx *cli.Context) (validTX *types.Transaction, gasprice 
 
 	client, err = ethclient.Dial(connection)
 	if err != nil {
-		return validTX, gasprice, cli.NewExitError("Could not dial to Smilo node", 1)
+		return validTX, gasprice, cli.NewExitError("Could not dial to Didux node", 1)
 	}
 
 	thisctx, cancel := context.WithTimeout(context.Background(), timeout)
 	defer cancel()
 	chainID, err = client.NetworkID(thisctx)
 	if err != nil {
-		return validTX, gasprice, cli.NewExitError("Could not get NetworkID of Smilo node", 1)
+		return validTX, gasprice, cli.NewExitError("Could not get NetworkID of Didux node", 1)
 	}
 
-	fmt.Println("Connection to Smilo node OK", "chainID", chainID, "transaction", transaction, "connection", connection)
+	fmt.Println("Connection to Didux node OK", "chainID", chainID, "transaction", transaction, "connection", connection)
 
 	tx := common.HexToHash(transaction)
 	thisctx, cancel = LocalContext()
@@ -137,14 +138,14 @@ func CancelTransaction(ctx *cli.Context) error {
 
 	validTX, gasprice, err := GetValidTXGasPrice(ctx)
 	if err != nil {
-		return cli.NewExitError("Could not get GetStuff with Smilo node", 1)
+		return cli.NewExitError("Could not get GetStuff with Didux node", 1)
 	}
 
 	minGasPrice := big.NewInt(0).Add(big.NewInt(0).Add(validTX.GasPrice(), big.NewInt(0).Div(validTX.GasPrice(), big.NewInt(10))), big.NewInt(10))
 
 	err = ProcessValidTXAndGas(validTX, gasprice, minGasPrice, "cancel")
 	if err != nil {
-		return cli.NewExitError("Could not get DoMoreSuff with Smilo node", 1)
+		return cli.NewExitError("Could not get DoMoreSuff with Didux node", 1)
 	}
 
 	return nil
@@ -155,14 +156,14 @@ func UpTransaction(ctx *cli.Context) error {
 
 	validTX, gasprice, err := GetValidTXGasPrice(ctx)
 	if err != nil {
-		return cli.NewExitError("Could not get GetValidTXGasPrice with Smilo node", 1)
+		return cli.NewExitError("Could not get GetValidTXGasPrice with Didux node", 1)
 	}
 
 	minGasPrice := big.NewInt(0).Add(big.NewInt(0).Add(validTX.GasPrice(), big.NewInt(0).Div(validTX.GasPrice(), big.NewInt(10))), big.NewInt(10))
 
 	err = ProcessValidTXAndGas(validTX, gasprice, minGasPrice, "up")
 	if err != nil {
-		return cli.NewExitError("Could not ProcessValidTXAndGas with Smilo node", 1)
+		return cli.NewExitError("Could not ProcessValidTXAndGas with Didux node", 1)
 	}
 
 	return nil

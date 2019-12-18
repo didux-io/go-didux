@@ -1,3 +1,4 @@
+// Copyright 2020 The go-didux Authors
 // Copyright 2015 The go-ethereum Authors
 // This file is part of go-ethereum.
 //
@@ -143,12 +144,12 @@ var (
 	}
 	NetworkIdFlag = cli.Uint64Flag{
 		Name:  "networkid",
-		Usage: "Network identifier (integer, 20080914=Mainnet, 10=Testnet)",
+		Usage: "Network identifier (integer, 20200101=Mainnet, 10=Testnet)",
 		Value: eth.DefaultConfig.NetworkId,
 	}
 	TestnetFlag = cli.BoolFlag{
 		Name:  "testnet",
-		Usage: "Smilo Test network: pre-configured BFT+ test network",
+		Usage: "Didux Test network: pre-configured BFT+ test network",
 	}
 	RinkebyFlag = cli.BoolFlag{
 		Name:  "rinkeby",
@@ -160,7 +161,11 @@ var (
 	}
 	SportFlag = cli.BoolFlag{
 		Name:  "sport",
-		Usage: "Sport network: pre-configured proof-of-authority Smilo mainnet network",
+		Usage: "Sport network: pre-configured proof-of-authority Didux mainnet network",
+	}
+	OnpremiseFlag = cli.BoolFlag{
+		Name:  "onpremise",
+		Usage: "Sport network: with on-premise proof-of-authority Didux network",
 	}
 	DeveloperFlag = cli.BoolFlag{
 		Name:  "dev",
@@ -751,7 +756,7 @@ var (
 		Usage: "If enabled, emit specially formatted logging checkpoints",
 	}
 
-	// Smilo settings
+	// Didux settings
 	SportEnableNodePermissionFlag = cli.BoolFlag{
 		Name:  "smilobft.permissioned",
 		Usage: "If enabled, the node will allow only a defined list of nodes to connect",
@@ -1571,10 +1576,16 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *eth.Config) {
 			cfg.NetworkId = 5
 		}
 		cfg.Genesis = core.DefaultGoerliGenesisBlock()
+	case ctx.GlobalBool(OnpremiseFlag.Name):
+		log.Debug("&*&*&*&* Going to setup On-premise SPORT genesis block")
+		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
+			cfg.NetworkId = 0
+		}
+		cfg.Genesis = nil
 	case ctx.GlobalBool(SportFlag.Name):
 		log.Debug("&*&*&*&* Going to setup Default SPORT genesis block")
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 20080914
+			cfg.NetworkId = 20200101
 		}
 		cfg.Genesis = core.DefaultSportGenesisBlock()
 		log.Debug("&*&*&*&* Genesis block for SPoRT configuration: ", "cfg.Genesis", cfg.Genesis)
@@ -1614,16 +1625,16 @@ func SetDashboardConfig(ctx *cli.Context, cfg *dashboard.Config) {
 	cfg.Refresh = ctx.GlobalDuration(DashboardRefreshFlag.Name)
 }
 
-// RegisterEthService adds an Smilo client to the stack.
+// RegisterEthService adds an Didux client to the stack.
 func RegisterEthService(stack *node.Node, cfg *eth.Config) {
 	var err error
 	if cfg.SyncMode == downloader.LightSync {
-		log.Info("Going to register a Smilo light Client to the stack", "cfg", cfg)
+		log.Info("Going to register a Didux light Client to the stack", "cfg", cfg)
 		err = stack.Register(func(ctx *node.ServiceContext) (node.Service, error) {
 			return les.New(ctx, cfg)
 		})
 	} else {
-		log.Info("Going to register a Smilo full Client to the stack")
+		log.Info("Going to register a Didux full Client to the stack")
 		err = stack.Register(func(ctx *node.ServiceContext) (node.Service, error) {
 			fullNode, err := eth.New(ctx, cfg)
 			if fullNode != nil && cfg.LightServ > 0 {
@@ -1634,7 +1645,7 @@ func RegisterEthService(stack *node.Node, cfg *eth.Config) {
 		})
 	}
 	if err != nil {
-		Fatalf("Failed to register the Smilo service: %v", err)
+		Fatalf("Failed to register the Didux service: %v", err)
 	}
 }
 

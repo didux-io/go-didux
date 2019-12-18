@@ -1,3 +1,4 @@
+// Copyright 2020 The go-didux Authors
 // Copyright 2019 The go-smilo Authors
 // This file is part of the go-smilo library.
 //
@@ -16,9 +17,9 @@
 
 /**
  *
- * This script will generate ETH keys + Smilo Blackbox Keys and glue all together on the Smilo Genesis json
+ * This script will generate Didux keys + Didux Blackbox Keys and glue all together on the Didux Genesis json
  *
- * eg: rm -rf smilo && node generate_keys.js 5 smilo
+ * eg: rm -rf didux && node generate_keys.js 5 didux
  *
  */
 
@@ -33,7 +34,7 @@ const blackboxPATH = `${GOPATH}/src/Smilo-blackbox`;
 
 
 if (process.argv.length < 4) {
-    console.log(process.argv[1] + " <number of nodes, e.g. 7> <password, e.g. smilo>");
+    console.log(process.argv[1] + " <number of nodes, e.g. 7> <password, e.g. didux>");
     process.exit(0);
 }
 
@@ -127,13 +128,13 @@ if (extraDataCmdResult) {
     throw new Error("Could not generate extraData for the encoded list of fullnodes")
 }
 
-const genesisString = "{  \"alloc\": { \"" + addressListStriped.join("\": {      \"balance\": \"0x446c3b15f9926687d2c40534fdb564000000000000\"    },    \"") +
-    "\": {      \"balance\": \"0x446c3b15f9926687d2c40534fdb564000000000000\"    }" +
+const genesisString = "{  \"alloc\": { \"" + addressListStriped.join("\": {      \"balance\": \"0xA968163F0A57B400000\"    },    \"") +
+    "\": {      \"balance\": \"0xA968163F0A57B400000\"    }" +
     "  },  \"coinbase\": \"0x0000000000000000000000000000000000000000\",  \"config\": {    \"byzantiumBlock\": 1,    \"eip150Block\": 2,    \"eip150Hash\": \"0x0000000000000000000000000000000000000000000000000000000000000000\",    \"eip155Block\": 0,    \"eip158Block\": 3,    \"petersburgBlock\": 4,    \"constantinopleBlock\": 5,    \"sport\": {      \"epoch\": 30000,      \"policy\": 0    },   " +
-    " \"isSmilo\": true,  \"isGas\": true,  \"isGasRefunded\": true,  \"chainId\": 10" +
+    " \"isSmilo\": true,  \"isGas\": true,  \"isGasRefunded\": true,  \"chainId\": 1010" +
     "  },  \"extraData\": \"" + extraData + "\",  \"gasLimit\": \"0x2518C7E00\",  \"difficulty\": \"0x1\",  \"mixHash\": \"0x636861696e20706c6174666f726d2077697468206120636f6e736369656e6365\",  \"nonce\": \"0x0\",  \"parentHash\": \"0x0000000000000000000000000000000000000000000000000000000000000000\",  \"timestamp\": \"0x00\"}";
 
 
 const genesis = JSON.parse(genesisString);
 
-fs.writeFileSync(basePath + "/smilo-genesis.json", JSON.stringify(genesis, null, 2));
+fs.writeFileSync(basePath + "/didux-genesis.json", JSON.stringify(genesis, null, 2));

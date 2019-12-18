@@ -50,7 +50,7 @@ func (s *PublicBlockChainAPI) GetSmiloPayload(digestHex string) (string, error) 
 		return "", err
 	}
 	if len(b) != 64 {
-		return "", fmt.Errorf("expected a Smilo digest of length 64, but got %d", len(b))
+		return "", fmt.Errorf("expected a Didux digest of length 64, but got %d", len(b))
 	}
 	data, err := vault.VaultInstance.Get(b)
 	if err != nil {

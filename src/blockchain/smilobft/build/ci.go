@@ -86,7 +86,7 @@ var (
 	debExecutables = []debExecutable{
 		{
 			BinaryName:  "sabigen",
-			Description: "Source code generator to convert Smilo contract definitions into easy to use, compile-time type-safe Go packages.",
+			Description: "Source code generator to convert Didux contract definitions into easy to use, compile-time type-safe Go packages.",
 		},
 		{
 			BinaryName:  "sbootnode",
@@ -94,35 +94,35 @@ var (
 		},
 		{
 			BinaryName:  "sevm",
-			Description: "Developer utility version of the Smilo EVM (Ethereum Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode.",
+			Description: "Developer utility version of the Didux EVM (Ethereum Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode.",
 		},
 		{
 			BinaryName:  "sgeth",
-			Description: "Smilo CLI client.",
+			Description: "Didux CLI client.",
 		},
 		{
 			BinaryName:  "spuppeth",
-			Description: "Smilo private network manager.",
+			Description: "Didux private network manager.",
 		},
 		{
 			BinaryName:  "srlpdump",
-			Description: "Smilo Developer utility tool that prints RLP structures.",
+			Description: "Didux Developer utility tool that prints RLP structures.",
 		},
 		{
 			BinaryName:  "swnode",
-			Description: "Smilo Whisper diagnostic tool",
+			Description: "Didux Whisper diagnostic tool",
 		},
 		{
 			BinaryName:  "sclef",
-			Description: "Smilo account management tool.",
+			Description: "Didux account management tool.",
 		},
 		{
 			BinaryName:  "extradata",
-			Description: "Smilo extradata management tool.",
+			Description: "Didux extradata management tool.",
 		},
 		{
 			BinaryName:  "smiloutils",
-			Description: "Smilo utils tool.",
+			Description: "Didux utils tool.",
 		},
 	}
 
@@ -199,7 +199,7 @@ func doInstall(cmdline []string) {
 	var (
 		arch   = flag.String("arch", "", "Architecture to cross build for")
 		cc     = flag.String("cc", "", "C compiler to cross build with")
-		rename = flag.Bool("rename", false, "Rename build files to Smilo version (adds prefix s in front, eg: sgeth)")
+		rename = flag.Bool("rename", false, "Rename build files to Didux version (adds prefix s in front, eg: sgeth)")
 	)
 	flag.CommandLine.Parse(cmdline)
 	env := build.Env()
@@ -270,7 +270,7 @@ func doInstall(cmdline []string) {
 
 func doRename(rename bool) {
 	if rename {
-		fmt.Println("**** Going to rename geth files to Smilo custom ****")
+		fmt.Println("**** Going to rename geth files to Didux custom ****")
 		if _, err := os.Stat(filepath.Join(GOBIN, "abigen")); !os.IsNotExist(err) {
 			os.Rename(filepath.Join(GOBIN, "abigen"), filepath.Join(GOBIN, "sabigen"))
 		}
@@ -295,7 +295,7 @@ func doRename(rename bool) {
 		if _, err := os.Stat(filepath.Join(GOBIN, "clef")); !os.IsNotExist(err) {
 			os.Rename(filepath.Join(GOBIN, "clef"), filepath.Join(GOBIN, "sclef"))
 		}
-		fmt.Println("**** Done renaming geth files to Smilo custom ****")
+		fmt.Println("**** Done renaming geth files to Didux custom ****")
 
 	}
 }

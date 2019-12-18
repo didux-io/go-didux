@@ -100,7 +100,7 @@ func (p *StateProcessor) Process(block *types.Block, statedb, vaultState *state.
 // for the transaction, gas used and an error if the transaction failed,
 // indicating the block was invalid.
 func ApplyTransaction(config *params.ChainConfig, bc ChainContext, author *common.Address, gp *GasPool, statedb, vaultState *state.StateDB, header *types.Header, tx *types.Transaction, usedGas *uint64, cfg vm.Config) (*types.Receipt, *types.Receipt, uint64, error) {
-	//if Smilo is enabled and transaction is Vault, set the VaultStateDB = StateDB
+	//if Didux is enabled and transaction is Vault, set the VaultStateDB = StateDB
 	if !config.IsSmilo || !tx.IsVault() {
 		vaultState = statedb
 	}
@@ -133,7 +133,7 @@ func ApplyTransaction(config *params.ChainConfig, bc ChainContext, author *commo
 	}
 	*usedGas += gas
 
-	// Vault transactions when Smilo is enable will ignore failures
+	// Vault transactions when Didux is enable will ignore failures
 	publicFailed := !(config.IsSmilo && tx.IsVault()) && failed
 
 	// Create a new receipt for the transaction, storing the intermediate root and gas used by the tx
