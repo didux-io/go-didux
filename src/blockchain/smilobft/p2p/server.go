@@ -959,7 +959,7 @@ func (srv *Server) setupConn(c *conn, flags connFlag, dialDest *enode.Node) erro
 	if srv.SportEnableNodePermissionFlag {
 		currentNode := srv.NodeInfo().ID
 		cnodeName := srv.NodeInfo().Name
-		clog.Trace("Smilo permissioning",
+		clog.Trace("Didux permissioning",
 			"SportEnableNodePermissionFlag", srv.SportEnableNodePermissionFlag,
 			"DataDir", srv.DataDir,
 			"Current Node ID", currentNode,

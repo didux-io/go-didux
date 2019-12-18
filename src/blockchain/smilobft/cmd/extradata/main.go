@@ -200,7 +200,7 @@ func GenerateExtraFromFullnodes(vanity string, fullnodesStr string) (string, err
 func main() {
 	app := cli.NewApp()
 	app.Name = "extradata"
-	app.Usage = "The Smilo ExtraData command line interface"
+	app.Usage = "The Didux ExtraData command line interface"
 
 	app.Commands = []cli.Command{
 		ExtraCommand,

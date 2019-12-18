@@ -7,21 +7,21 @@
 .PHONY: geth-windows geth-windows-386 geth-windows-amd64
 
 
-COMPANY=Smilo
-AUTHOR=go-smilo
+COMPANY=Didux
+AUTHOR=go-didux
 
-DIR = $(shell pwd)
-PACKAGES = $(shell find ./src -type d -not -path '\./src')
-PACKAGES_ETH = $(shell find src/blockchain/smilobft -type d -not -path '\src/blockchain/smilobft')
+DIR=$(shell pwd)
+PACKAGES=$(shell find ./src -type d -not -path '\./src')
+PACKAGES_ETH=$(shell find src/blockchain/smilobft -type d -not -path '\src/blockchain/smilobft')
 
-SRC_DIR = "src/blockchain/smilobft"
+SRC_DIR="src/blockchain/smilobft"
 
 
-GOBIN = $(shell pwd)/build/bin
+GOBIN=$(shell pwd)/build/bin
 GO ?= 1.12
 
 build: clean
-	go build -o go-smilo main.go
+	go build -o go-didux main.go
 	docker build --no-cache -t $(FULLDOCKERNAME) .
 
 test: clean ## Run tests
@@ -251,10 +251,4 @@ geth-windows-amd64:
 	@echo "Windows amd64 cross compilation done:"
 	@ls -ld $(GOBIN)/geth-windows-* | grep amd64
 
-
-
-
 # ********* END GETH BUILD TASKS *********
-
-
-

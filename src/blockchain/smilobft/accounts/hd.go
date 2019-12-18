@@ -59,8 +59,6 @@ var LegacyLedgerBaseDerivationPath = DerivationPath{0x80000000 + 44, 0x80000000 
 // that.
 // The root path for Smilo is m/44'/20200101'/0'/0
 // Following the same steps as Ethereum, We will go with the simpler approach of incrementing the last component.
-//
-// 20200101 - It was announced that L.B. would file for bankruptcy. In the earlier episodes, JP.M.C. acquired B.S.
 
 type DerivationPath []uint32
 

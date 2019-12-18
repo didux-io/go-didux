@@ -293,7 +293,7 @@ func TestSmiloPayCalculations(t *testing.T) {
 		t.Run(test.name, func(t *testing.T) {
 
 			newbalance, _ := etherutils.StringToWei(fmt.Sprintf("%d ether", test.balance))
-			t.Log("Balance Smilo : ", test.balance)
+			t.Log("Balance Didux : ", test.balance)
 
 			maxSmiloPay, _ := MaxSmiloPay(newbalance)
 			require.NotEmpty(t, maxSmiloPay)

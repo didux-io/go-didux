@@ -35,7 +35,7 @@ import (
 	"go-smilo/src/blockchain/smilobft/ethdb"
 )
 
-// backend is the override for Clique backend, with extra functions for Smilo BFT
+// backend is the override for Clique backend, with extra functions for Didux BFT
 type backend struct {
 	config           *sport.Config
 	smilobftEventMux *event.TypeMux

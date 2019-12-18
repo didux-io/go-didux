@@ -246,7 +246,7 @@ var (
 		IsGas:         true,
 		IsGasRefunded: true,
 
-		ChainID: big.NewInt(20080914),
+		ChainID: big.NewInt(20200101),
 
 		RequiredMinFunds: 1,
 	}

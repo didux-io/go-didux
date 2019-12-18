@@ -1,3 +1,4 @@
+// Copyright 2020 The go-didux Authors
 // Copyright 2017 The go-ethereum Authors
 // This file is part of go-ethereum.
 //
@@ -114,17 +115,12 @@ func makeConfigNode(ctx *cli.Context) (*node.Node, gethConfig) {
 
 	log.Warn(`
                                                                               
-    @@                                                                        
-     @@@@@ @@@@@@@@@@@@@                         @@@@  @@@@@                  
-  @@ @@@@@ @@@@@@@@@@@@@                         @@@@  @@@@@                  
-     @@@@@ @@@@@@@@@@@@@                               @@@@@                  
-     @@@@@                @@@@ @@@@@  @@@@@@@    @@@@  @@@@@     @@@@@@@      
-     @@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@@@@@@@@   @@@@  @@@@@   @@@@@@@@@@@    
-     @@@@@@@@@@@@@@@@@@@  @@@@@   @@@@    @@@@   @@@@  @@@@@  @@@@     @@@@   
-                   @@@@@  @@@@    @@@@    @@@@   @@@@  @@@@@  @@@       @@@   
-     @@@@@@@@@@@@@@@@@@@  @@@@    @@@@    @@@@   @@@@  @@@@@  @@@@     @@@@   
-     @@@@@@@@@@@@@@@@@@@  @@@@    @@@@    @@@@   @@@@  @@@@@   @@@@@@@@@@@    
-     @@@@@@@@@@@@@@@@@@@  @@@@    @@@@    @@@@   @@@@  @@@@@     @@@@@@@    @@
+
+	ooooooooo   ooooo  ooooooooo   ooooo  oooo  ooooo  oooo      ooooo   ooooooo   
+	 888   88o   888    888   88o   888    88     888  88         888  o888   888o 
+	 888    888  888    888    888  888    88       888           888  888     888 
+	 888   888   888    888   888   888    88      88 888    oo   888  888o   o888 
+	o888ooo88   o888o  o888ooo88     888oo88    o88o  o888o  88  o888o   88ooo88   
                                                                               
 `)
 
@@ -144,9 +140,9 @@ func makeConfigNode(ctx *cli.Context) (*node.Node, gethConfig) {
 	}
 
 	if !ctx.GlobalBool(utils.SportFlag.Name) && !ctx.GlobalBool(utils.TestnetFlag.Name) {
-		log.Error("Failed to start Smilo network. Please use --sport (mainnet) or --testnet (testnet)")
+		log.Error("Failed to start Didux network. Please use --sport (mainnet) or --testnet (testnet)")
 	} else {
-		log.Info("Starting Smilo network, ", "sport", ctx.GlobalString(utils.SportFlag.Name), "testnet", ctx.GlobalString(utils.TestnetFlag.Name))
+		log.Info("Starting Didux network, ", "sport", ctx.GlobalString(utils.SportFlag.Name), "testnet", ctx.GlobalString(utils.TestnetFlag.Name))
 	}
 
 	// Apply flags.
@@ -245,7 +241,7 @@ func smiloValidateConsensus(stack *node.Node) {
 
 	err := stack.Service(&smilo)
 	if err != nil {
-		log.Warn("Error retrieving Smilo service:", "err", err)
+		log.Warn("Error retrieving Didux service:", "err", err)
 	}
 
 	if smilo == nil || smilo.ChainConfig() == nil || smilo.ChainConfig().Sport == nil && smilo.ChainConfig().Clique == nil {

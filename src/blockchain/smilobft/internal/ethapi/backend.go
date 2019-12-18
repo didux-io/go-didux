@@ -156,7 +156,7 @@ func GetAPIs(apiBackend Backend) []rpc.API {
 
 	codeanalysisPath := apiBackend.GetSmiloCodeAnalysisPath()
 	if codeanalysisPath != "" {
-		log.Warn("Smilo Code Analysis is enabled, will add endpoints ... ")
+		log.Warn("Didux Code Analysis is enabled, will add endpoints ... ")
 		c := &codeAnalysisAPI{codeanalysisPath: codeanalysisPath}
 
 		endpoints = append(endpoints, rpc.API{

@@ -1,3 +1,4 @@
+// Copyright 2020 The go-didux Authors
 // Copyright 2019 The go-smilo Authors
 // This file is part of the go-smilo library.
 //
@@ -16,7 +17,7 @@
 
 /**
  *
- * This script will generate ETH keys + Smilo Blackbox Keys and glue all together on the Smilo Genesis json
+ * This script will generate ETH keys + Didux Blackbox Keys and glue all together on the Didux Genesis json
  *
  * eg: rm -rf smilo && node generate_keys.js 5 smilo
  *
@@ -136,4 +137,4 @@ const genesisString = "{  \"alloc\": { \"" + addressListStriped.join("\": {     
 
 const genesis = JSON.parse(genesisString);
 
-fs.writeFileSync(basePath + "/smilo-genesis.json", JSON.stringify(genesis, null, 2));
+fs.writeFileSync(basePath + "/didux-genesis.json", JSON.stringify(genesis, null, 2));

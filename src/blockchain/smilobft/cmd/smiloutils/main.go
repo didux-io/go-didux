@@ -27,8 +27,8 @@ import (
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "Smilo Utils CMD"
-	app.Usage = "The Smilo Utils command line interface"
+	app.Name = "Didux Utils CMD"
+	app.Usage = "The Didux Utils command line interface"
 
 	app.Commands = []cli.Command{
 		src.TransactionCommand,

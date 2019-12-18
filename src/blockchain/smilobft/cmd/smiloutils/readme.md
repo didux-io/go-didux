@@ -1,4 +1,4 @@
-* Smilo Utils is a collection of useful commands to operate Smilo Blockchain.
+* Didux Utils is a collection of useful commands to operate Didux Blockchain.
 
 
 1. Cancel a transaction:

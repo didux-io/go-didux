@@ -127,7 +127,7 @@ func (s *Smilo) SetContractBackend(backend bind.ContractBackend) {
 // New creates a new Smilo object (including the
 // initialisation of the common Smilo object)
 func New(ctx *node.ServiceContext, config *Config) (*Smilo, error) {
-	log.Info("$$$$$$$ Going to creates a new Smilo backend config object ")
+	log.Info("$$$$$$$ Going to creates a new Didux backend config object ")
 	// Ensure configuration values are compatible and sane
 	if config.SyncMode == downloader.LightSync {
 		return nil, errors.New("can't run eth.Smilo in light sync mode, use les.LightEthereum")
@@ -194,7 +194,7 @@ func New(ctx *node.ServiceContext, config *Config) (*Smilo, error) {
 	if bcVersion != nil {
 		dbVer = fmt.Sprintf("%d", *bcVersion)
 	}
-	log.Info("$$$$$$$$$$$$ Initialising Smilo protocol", "versions", ProtocolVersions, "network", config.NetworkId, "dbversion", dbVer)
+	log.Info("$$$$$$$$$$$$ Initialising Didux protocol", "versions", ProtocolVersions, "network", config.NetworkId, "dbversion", dbVer)
 
 	if !config.SkipBcVersionCheck {
 		if bcVersion != nil && *bcVersion > core.BlockChainVersion {
