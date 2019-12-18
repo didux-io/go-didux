@@ -64,7 +64,7 @@ var (
 
 	// ErrInsufficientSmiloPay is returned if the total cost of executing a transaction
 	//	is higher than the SmiloPay balance of the user's account.
-	ErrInsufficientSmiloPay = errors.New("insufficient SmiloPay for gas * price")
+	ErrInsufficientSmiloPay = errors.New("insufficient DiduxPay for gas * price")
 
 	// ErrInsufficientMinFunds is returned if the total cost of executing a transaction
 	//	is higher than the min balance that the user's account should have. (0.01)
