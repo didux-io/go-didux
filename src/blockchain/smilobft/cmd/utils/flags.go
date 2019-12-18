@@ -1576,7 +1576,7 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *eth.Config) {
 		}
 		cfg.Genesis = core.DefaultGoerliGenesisBlock()
 	case ctx.GlobalBool(OnpremiseFlag.Name):
-		log.Debug("&*&*&*&* Going to setup custom SPORT genesis block")
+		log.Debug("&*&*&*&* Going to setup On-premise SPORT genesis block")
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
 			cfg.NetworkId = 0
 		}
@@ -1769,14 +1769,7 @@ func MakeGenesis(ctx *cli.Context) *core.Genesis {
 	case ctx.GlobalBool(GoerliFlag.Name):
 		genesis = core.DefaultGoerliGenesisBlock()
 	case ctx.GlobalBool(SportFlag.Name):
-		if (ctx.GlobalBool(SportFlag.Name)) {
-			Fatalf("Developer chains are ephemeral")
-			genesis = core.DefaultSportGenesisBlock()
-		} else {
-			Fatalf("Developer chains are ephemeral")
-			genesis = core.DefaultSportGenesisBlock()
-		}
-
+		genesis = core.DefaultSportGenesisBlock()
 	case ctx.GlobalBool(DeveloperFlag.Name):
 		Fatalf("Developer chains are ephemeral")
 	}
