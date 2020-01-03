@@ -36,7 +36,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core"
 )
 
 type allocItem struct{ Addr, Balance *big.Int }

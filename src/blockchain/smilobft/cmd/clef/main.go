@@ -38,18 +38,18 @@ import (
 	"github.com/mattn/go-colorable"
 	"github.com/mattn/go-isatty"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/accounts/keystore"
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
-	"go-smilo/src/blockchain/smilobft/console"
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/internal/ethapi"
-	"go-smilo/src/blockchain/smilobft/node"
-	"go-smilo/src/blockchain/smilobft/params"
-	"go-smilo/src/blockchain/smilobft/signer/core"
-	"go-smilo/src/blockchain/smilobft/signer/fourbyte"
-	"go-smilo/src/blockchain/smilobft/signer/rules"
-	"go-smilo/src/blockchain/smilobft/signer/storage"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts/keystore"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/console"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/internal/ethapi"
+	"go-didux/src/blockchain/smilobft/node"
+	"go-didux/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/signer/core"
+	"go-didux/src/blockchain/smilobft/signer/fourbyte"
+	"go-didux/src/blockchain/smilobft/signer/rules"
+	"go-didux/src/blockchain/smilobft/signer/storage"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
@@ -58,7 +58,7 @@ import (
 	"github.com/ethereum/go-ethereum/rlp"
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 )
 
 const legalWarning = `

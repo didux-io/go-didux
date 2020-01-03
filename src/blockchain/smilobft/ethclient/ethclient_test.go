@@ -27,17 +27,17 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"go-smilo/src/blockchain/smilobft/consensus/ethash"
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/eth"
-	"go-smilo/src/blockchain/smilobft/node"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/consensus/ethash"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/eth"
+	"go-didux/src/blockchain/smilobft/node"
+	"go-didux/src/blockchain/smilobft/params"
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft"
+	"go-didux/src/blockchain/smilobft"
 )
 
 // Verify that Client implements the ethereum interfaces.

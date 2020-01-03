@@ -33,10 +33,10 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"go-smilo/src/blockchain/smilobft/ethdb"
-	"go-smilo/src/blockchain/smilobft/p2p"
-	"go-smilo/src/blockchain/smilobft/p2p/discv5"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p/discv5"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
 )
 
 const (

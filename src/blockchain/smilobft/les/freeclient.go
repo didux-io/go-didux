@@ -28,7 +28,7 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/ethdb"
 )
 
 // freeClientPool implements a client database that limits the connection time

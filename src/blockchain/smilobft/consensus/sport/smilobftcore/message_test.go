@@ -24,8 +24,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/cmn"
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/cmn"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 func TestPreprepare(t *testing.T) {

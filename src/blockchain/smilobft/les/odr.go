@@ -21,9 +21,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/ethdb"
-	"go-smilo/src/blockchain/smilobft/light"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/light"
 )
 
 // LesOdr implements light.OdrBackend

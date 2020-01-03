@@ -29,7 +29,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/p2p/enr"
+	"go-didux/src/blockchain/smilobft/p2p/enr"
 )
 
 var errMissingPrefix = errors.New("missing 'enr:' prefix for base64-encoded record")

@@ -22,8 +22,8 @@ import (
 	"sync"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/ethdb"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
 
 	"github.com/ethereum/go-ethereum/common/mclock"
 	"github.com/ethereum/go-ethereum/common/prque"

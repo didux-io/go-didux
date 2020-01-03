@@ -20,7 +20,7 @@ package tests
 import (
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/core/vm"
 )
 
 func TestVM(t *testing.T) {

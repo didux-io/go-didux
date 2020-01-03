@@ -25,10 +25,10 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"go-smilo/src/blockchain/smilobft/accounts/abi/bind"
-	"go-smilo/src/blockchain/smilobft/accounts/abi/bind/backends"
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/accounts/abi/bind"
+	"go-didux/src/blockchain/smilobft/accounts/abi/bind/backends"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 var testKey, _ = crypto.HexToECDSA("b71c71a67e1177ad4e901695e1b4b9ee17ae16c6668d313eac2f96dbcda3f291")

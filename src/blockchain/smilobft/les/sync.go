@@ -24,9 +24,9 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
-	"go-smilo/src/blockchain/smilobft/eth/downloader"
-	"go-smilo/src/blockchain/smilobft/light"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/eth/downloader"
+	"go-didux/src/blockchain/smilobft/light"
 )
 
 var errInvalidCheckpoint = errors.New("invalid advertised checkpoint")

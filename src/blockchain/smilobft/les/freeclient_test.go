@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
 
 	"github.com/ethereum/go-ethereum/common/mclock"
 )

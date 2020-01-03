@@ -37,8 +37,8 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/event"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 var (

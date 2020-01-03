@@ -35,9 +35,9 @@ import (
 	"golang.org/x/crypto/pbkdf2"
 	"golang.org/x/sync/syncmap"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p"
 )
 
 // Statistics holds several message-related counter for analytics

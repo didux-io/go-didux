@@ -22,7 +22,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/accounts/keystore"
+	"go-didux/src/blockchain/smilobft/accounts/keystore"
 )
 
 // deployFaucet queries the user for various input on deploying a faucet, after

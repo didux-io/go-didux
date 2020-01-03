@@ -27,9 +27,9 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	math2 "github.com/ethereum/go-ethereum/common/math"
 
-	"go-smilo/src/blockchain/smilobft/consensus/ethash"
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/consensus/ethash"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 // alethGenesisSpec represents the genesis specification format used by the

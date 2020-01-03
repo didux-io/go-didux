@@ -24,8 +24,8 @@ import (
 	"reflect"
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
-	"go-smilo/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/core/vm"
 )
 
 func TestState(t *testing.T) {

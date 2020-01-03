@@ -25,18 +25,18 @@ import (
 	"os"
 	"reflect"
 
-	"go-smilo/src/blockchain/smilobft/accounts/scwallet"
-	"go-smilo/src/blockchain/smilobft/signer/storage"
+	"go-didux/src/blockchain/smilobft/accounts/scwallet"
+	"go-didux/src/blockchain/smilobft/signer/storage"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/accounts/keystore"
-	"go-smilo/src/blockchain/smilobft/accounts/usbwallet"
-	"go-smilo/src/blockchain/smilobft/internal/ethapi"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts/keystore"
+	"go-didux/src/blockchain/smilobft/accounts/usbwallet"
+	"go-didux/src/blockchain/smilobft/internal/ethapi"
 )
 
 const (

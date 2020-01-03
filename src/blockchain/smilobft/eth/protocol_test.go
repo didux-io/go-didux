@@ -26,9 +26,9 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/eth/downloader"
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/eth/downloader"
+	"go-didux/src/blockchain/smilobft/p2p"
 )
 
 func init() {

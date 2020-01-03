@@ -23,8 +23,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
-	"go-smilo/src/blockchain/smilobft/consensus/sport/fullnode"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/consensus/sport/fullnode"
 )
 
 func TestRoundChangeSet(t *testing.T) {

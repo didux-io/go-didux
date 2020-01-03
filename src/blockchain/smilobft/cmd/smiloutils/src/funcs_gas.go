@@ -23,7 +23,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft"
+	"go-didux/src/blockchain/smilobft"
 )
 
 // EstimateGas will estimate the gas cost

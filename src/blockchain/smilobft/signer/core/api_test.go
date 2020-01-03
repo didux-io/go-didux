@@ -27,18 +27,18 @@ import (
 	"testing"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/accounts/keystore"
-	"go-smilo/src/blockchain/smilobft/signer/core"
-	"go-smilo/src/blockchain/smilobft/signer/fourbyte"
-	"go-smilo/src/blockchain/smilobft/signer/storage"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts/keystore"
+	"go-didux/src/blockchain/smilobft/signer/core"
+	"go-didux/src/blockchain/smilobft/signer/fourbyte"
+	"go-didux/src/blockchain/smilobft/signer/storage"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/internal/ethapi"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/internal/ethapi"
 )
 
 //Used for testing

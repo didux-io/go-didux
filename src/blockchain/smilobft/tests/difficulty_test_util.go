@@ -23,9 +23,9 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/math"
 
-	"go-smilo/src/blockchain/smilobft/consensus/ethash"
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/consensus/ethash"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 //go:generate gencodec -type DifficultyTest -field-override difficultyTestMarshaling -out gen_difficultytest.go

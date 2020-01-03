@@ -33,8 +33,8 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // ledgerOpcode is an enumeration encoding the supported Ledger opcodes.

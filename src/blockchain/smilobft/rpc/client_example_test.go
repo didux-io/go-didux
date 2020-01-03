@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 )
 
 // In this example, our client wishes to track the latest 'block number'

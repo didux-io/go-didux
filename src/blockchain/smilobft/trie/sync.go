@@ -24,7 +24,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common/prque"
 
-	"go-smilo/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/ethdb"
 )
 
 // ErrNotRequested is returned by the trie sync when it's requested to process a

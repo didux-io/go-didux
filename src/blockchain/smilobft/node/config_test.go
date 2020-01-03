@@ -26,7 +26,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p"
 )
 
 // Tests that datadirs can be successfully created, be them manually configured

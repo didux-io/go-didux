@@ -26,7 +26,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common/mclock"
 
-	"go-smilo/src/blockchain/smilobft/light"
+	"go-didux/src/blockchain/smilobft/light"
 )
 
 var (

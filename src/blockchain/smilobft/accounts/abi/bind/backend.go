@@ -21,11 +21,11 @@ import (
 	"errors"
 	"math/big"
 
-	core "go-smilo/src/blockchain/smilobft"
+	core "go-didux/src/blockchain/smilobft"
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 var (

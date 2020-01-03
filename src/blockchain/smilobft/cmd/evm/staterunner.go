@@ -27,9 +27,9 @@ import (
 
 	cli "gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/core/state"
-	"go-smilo/src/blockchain/smilobft/core/vm"
-	"go-smilo/src/blockchain/smilobft/tests"
+	"go-didux/src/blockchain/smilobft/core/state"
+	"go-didux/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/tests"
 )
 
 var stateTestCommand = cli.Command{

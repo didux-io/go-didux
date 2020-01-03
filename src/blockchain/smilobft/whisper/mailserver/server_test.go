@@ -28,7 +28,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	whisper "go-smilo/src/blockchain/smilobft/whisper/whisperv6"
+	whisper "go-didux/src/blockchain/smilobft/whisper/whisperv6"
 )
 
 const powRequirement = 0.00001

@@ -21,9 +21,9 @@ package geth
 import (
 	"encoding/json"
 
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/p2p/discv5"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/p2p/discv5"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 // MainnetGenesis returns the JSON spec to use for the main Ethereum network. It

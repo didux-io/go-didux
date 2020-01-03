@@ -27,7 +27,7 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p"
 )
 
 // Peer represents a whisper protocol peer connection.

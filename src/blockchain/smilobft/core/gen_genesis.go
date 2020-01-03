@@ -11,7 +11,7 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/common/math"
 
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 var _ = (*genesisSpecMarshaling)(nil)

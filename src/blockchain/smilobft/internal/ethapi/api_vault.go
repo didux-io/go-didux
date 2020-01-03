@@ -21,14 +21,14 @@ import (
 	"context"
 	"encoding/hex"
 	"fmt"
+	"github.com/ethereum/go-ethereum/log"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/vault"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/vault"
 )
 
 // SendRawTxArgs represents the arguments to submit a new signed private transaction into the transaction pool.
@@ -36,8 +36,41 @@ type VaultSendRawTxArgs struct {
 	SharedWith []string `json:"sharedWith"`
 }
 
-// SendRawTransactionVault will add the signed transaction to the Vault and to the transaction pool.
-// The sender is responsible for signing the transaction and using the correct nonce.
+// SendRawTransactionVault will add the signed transaction to the transaction pool.
+// The sender is responsible for signing the transaction, using the correct nonce and share it with the Vault.
+func (s *PublicTransactionPoolAPI) ShareRawTransactionVault(ctx context.Context, encodedTx hexutil.Bytes, args VaultSendRawTxArgs) (string, error) {
+	if vault.VaultInstance == nil {
+		return "", fmt.Errorf("vault is not enabled")
+	}
+
+	tx := new(types.Transaction)
+	if err := rlp.DecodeBytes(encodedTx, tx); err != nil {
+		return "", err
+	}
+
+	data := tx.Data()
+	isVault := args.SharedWith != nil
+
+	if isVault {
+		if len(data) > 0 {
+			log.Info("Share vault tx", "data", fmt.Sprintf("%x", data), "vaultfrom", args.SharedWith, "sharedwith", args.SharedWith)
+			data, err := vault.VaultInstance.Post(data, args.SharedWith[0], args.SharedWith)
+			log.Info("Shared vault tx result", "data", fmt.Sprintf("%x", data), "vaultfrom", args.SharedWith, "sharedwith", args.SharedWith)
+
+			if err != nil {
+				return "", err
+			}
+			return hex.EncodeToString(data), nil
+		}
+	} else {
+		return "", fmt.Errorf("transaction is not vault type")
+	}
+
+	return hex.EncodeToString(data), nil
+}
+
+// SendRawTransactionVault will add the signed transaction to the transaction pool.
+// The sender is responsible for signing the transaction, using the correct nonce and share it with the Vault.
 func (s *PublicTransactionPoolAPI) SendRawTransactionVault(ctx context.Context, encodedTx hexutil.Bytes, args VaultSendRawTxArgs) (common.Hash, error) {
 	if vault.VaultInstance == nil {
 		return common.Hash{}, fmt.Errorf("vault is not enabled")
@@ -54,12 +87,6 @@ func (s *PublicTransactionPoolAPI) SendRawTransactionVault(ctx context.Context, 
 	if isVault {
 		if len(data) > 0 {
 			log.Info("sending vault tx", "data", fmt.Sprintf("%x", data), "vaultfrom", args.SharedWith, "sharedwith", args.SharedWith)
-			data, err := vault.VaultInstance.PostRawTransaction(data, args.SharedWith)
-			log.Info("sent vault tx", "data", fmt.Sprintf("%x", data), "vaultfrom", args.SharedWith, "sharedwith", args.SharedWith)
-
-			if err != nil {
-				return common.Hash{}, err
-			}
 		}
 	} else {
 		return common.Hash{}, fmt.Errorf("transaction is not vault type")

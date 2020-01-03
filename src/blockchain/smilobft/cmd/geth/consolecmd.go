@@ -23,15 +23,15 @@ import (
 
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
 	"fmt"
 	"path/filepath"
 	"syscall"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
-	"go-smilo/src/blockchain/smilobft/console"
-	"go-smilo/src/blockchain/smilobft/node"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/console"
+	"go-didux/src/blockchain/smilobft/node"
 )
 
 var (

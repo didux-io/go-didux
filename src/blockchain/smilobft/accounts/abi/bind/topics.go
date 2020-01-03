@@ -26,7 +26,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"go-smilo/src/blockchain/smilobft/accounts/abi"
+	"go-didux/src/blockchain/smilobft/accounts/abi"
 )
 
 // makeTopics converts a filter query argument list into a filter topic set.

@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 // Forks table defines supported forks and their chain config.

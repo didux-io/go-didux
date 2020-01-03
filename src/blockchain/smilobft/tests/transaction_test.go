@@ -19,7 +19,7 @@ package tests
 import (
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 func TestTransaction(t *testing.T) {

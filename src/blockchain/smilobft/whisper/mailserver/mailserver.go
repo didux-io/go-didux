@@ -29,7 +29,7 @@ import (
 	"github.com/syndtr/goleveldb/leveldb/opt"
 	"github.com/syndtr/goleveldb/leveldb/util"
 
-	whisper "go-smilo/src/blockchain/smilobft/whisper/whisperv6"
+	whisper "go-didux/src/blockchain/smilobft/whisper/whisperv6"
 )
 
 // WMailServer represents the state data of the mailserver.

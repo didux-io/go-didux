@@ -24,7 +24,7 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/ethdb"
 )
 
 // Prove constructs a merkle proof for key. The result contains all encoded nodes

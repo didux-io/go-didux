@@ -27,11 +27,11 @@ import (
 	"testing"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/accounts/abi/bind"
-	"go-smilo/src/blockchain/smilobft/accounts/abi/bind/backends"
-	"go-smilo/src/blockchain/smilobft/contracts/checkpointoracle/contract"
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/accounts/abi/bind"
+	"go-didux/src/blockchain/smilobft/accounts/abi/bind/backends"
+	"go-didux/src/blockchain/smilobft/contracts/checkpointoracle/contract"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/params"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"

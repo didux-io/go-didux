@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"go-smilo/src/blockchain/smilobft/signer/core"
+	"go-didux/src/blockchain/smilobft/signer/core"
 
 	"github.com/ethereum/go-ethereum/common"
 )

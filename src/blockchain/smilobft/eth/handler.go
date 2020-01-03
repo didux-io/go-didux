@@ -28,23 +28,23 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"go-smilo/src/blockchain/smilobft/cmn"
-	"go-smilo/src/blockchain/smilobft/trie"
+	"go-didux/src/blockchain/smilobft/cmn"
+	"go-didux/src/blockchain/smilobft/trie"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/event"
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/eth/downloader"
-	"go-smilo/src/blockchain/smilobft/eth/fetcher"
-	"go-smilo/src/blockchain/smilobft/ethdb"
-	"go-smilo/src/blockchain/smilobft/p2p"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/eth/downloader"
+	"go-didux/src/blockchain/smilobft/eth/fetcher"
+	"go-didux/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 const (

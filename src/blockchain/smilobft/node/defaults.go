@@ -22,10 +22,10 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
-	"go-smilo/src/blockchain/smilobft/p2p/nat"
+	"go-didux/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p/nat"
 )
 
 const (

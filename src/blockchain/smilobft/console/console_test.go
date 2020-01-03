@@ -26,15 +26,15 @@ import (
 	"testing"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/miner"
+	"go-didux/src/blockchain/smilobft/miner"
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/consensus/ethash"
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/eth"
-	"go-smilo/src/blockchain/smilobft/internal/jsre"
-	"go-smilo/src/blockchain/smilobft/node"
+	"go-didux/src/blockchain/smilobft/consensus/ethash"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/eth"
+	"go-didux/src/blockchain/smilobft/internal/jsre"
+	"go-didux/src/blockchain/smilobft/node"
 )
 
 const (

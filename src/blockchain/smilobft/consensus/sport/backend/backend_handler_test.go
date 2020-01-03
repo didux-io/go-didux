@@ -25,9 +25,9 @@ import (
 
 	lru "github.com/hashicorp/golang-lru"
 
-	"go-smilo/src/blockchain/smilobft/cmn"
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/cmn"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 func TestBackendHandler(t *testing.T) {

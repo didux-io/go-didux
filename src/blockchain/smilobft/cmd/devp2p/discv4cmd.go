@@ -23,9 +23,9 @@ import (
 	"strings"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/p2p/discover"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/p2p/discover"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/params"
 
 	"github.com/ethereum/go-ethereum/crypto"
 	"gopkg.in/urfave/cli.v1"

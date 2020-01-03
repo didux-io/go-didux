@@ -26,11 +26,11 @@ import (
 	"github.com/ethereum/go-ethereum/common/bitutil"
 	"github.com/ethereum/go-ethereum/event"
 
-	"go-smilo/src/blockchain/smilobft/core/bloombits"
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/ethdb"
-	"go-smilo/src/blockchain/smilobft/node"
+	"go-didux/src/blockchain/smilobft/core/bloombits"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/node"
 )
 
 func BenchmarkBloomBits512(b *testing.B) {

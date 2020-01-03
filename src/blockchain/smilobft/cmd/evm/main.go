@@ -25,7 +25,7 @@ import (
 
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
 )
 
 var gitCommit = "" // Git SHA1 commit hash of the release (set via linker flags)

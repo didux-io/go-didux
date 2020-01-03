@@ -21,8 +21,8 @@ package geth
 import (
 	"math/big"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/ethclient"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/ethclient"
 )
 
 // EthereumClient provides access to the Ethereum APIs.

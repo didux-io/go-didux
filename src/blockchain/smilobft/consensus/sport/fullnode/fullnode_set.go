@@ -27,7 +27,7 @@ import (
 
 	"math"
 
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 func (fullnodeSet *fullnodeSet) Size() int {

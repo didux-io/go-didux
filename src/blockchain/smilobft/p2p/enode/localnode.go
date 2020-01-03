@@ -28,8 +28,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/p2p/enr"
-	"go-smilo/src/blockchain/smilobft/p2p/netutil"
+	"go-didux/src/blockchain/smilobft/p2p/enr"
+	"go-didux/src/blockchain/smilobft/p2p/netutil"
 )
 
 const (

@@ -29,7 +29,7 @@ import (
 	"github.com/pborman/uuid"
 	"golang.org/x/crypto/pbkdf2"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts"
 )
 
 // creates a Key and stores that in the given KeyStore by decrypting a presale key JSON

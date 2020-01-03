@@ -23,14 +23,14 @@ import (
 	"math/big"
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/params"
 
 	"golang.org/x/crypto/sha3"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // Tests block header storage and retrieval operations.

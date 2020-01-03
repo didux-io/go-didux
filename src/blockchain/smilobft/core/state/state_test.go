@@ -21,8 +21,8 @@ import (
 	"math/big"
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
-	"go-smilo/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/ethdb"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"

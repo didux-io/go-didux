@@ -26,7 +26,7 @@ import (
 	"strings"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/accounts/scwallet"
+	"go-didux/src/blockchain/smilobft/accounts/scwallet"
 
 	"encoding/json"
 	"net/http"
@@ -42,17 +42,17 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/accounts/keystore"
-	"go-smilo/src/blockchain/smilobft/consensus/ethash"
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/core/vm"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts/keystore"
+	"go-didux/src/blockchain/smilobft/consensus/ethash"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/params"
 
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/tyler-smith/go-bip39"

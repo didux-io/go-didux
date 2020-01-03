@@ -35,7 +35,7 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"golang.org/x/crypto/ssh/terminal"
 
-	"go-smilo/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core"
 )
 
 // config contains all the configurations needed by puppeth that should be saved

@@ -26,7 +26,7 @@ import (
 	"github.com/ethereum/go-ethereum/rlp"
 	"golang.org/x/crypto/sha3"
 
-	"go-smilo/src/blockchain/smilobft/p2p/enr"
+	"go-didux/src/blockchain/smilobft/p2p/enr"
 )
 
 // List of known secure identity schemes.

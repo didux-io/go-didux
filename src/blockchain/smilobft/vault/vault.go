@@ -22,7 +22,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/vault/blackbox"
+	"go-didux/src/blockchain/smilobft/vault/blackbox"
 )
 
 func GetBlackboxVault(targetIPC string) BlackboxVault {

@@ -19,11 +19,11 @@ package simulations
 import (
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
-	"go-smilo/src/blockchain/smilobft/p2p/enr"
+	"go-didux/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/enr"
 )
 
 // NoopService is the service that does not do anything

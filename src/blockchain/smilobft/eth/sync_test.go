@@ -21,9 +21,9 @@ import (
 	"testing"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/eth/downloader"
-	"go-smilo/src/blockchain/smilobft/p2p"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/eth/downloader"
+	"go-didux/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
 )
 
 // Tests that fast sync gets disabled as soon as a real block is successfully

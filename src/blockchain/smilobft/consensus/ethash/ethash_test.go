@@ -24,7 +24,7 @@ import (
 	"sync"
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // This test checks that cache lru logic doesn't crash under load.

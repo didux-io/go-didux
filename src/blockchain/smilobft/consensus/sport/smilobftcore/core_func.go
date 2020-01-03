@@ -23,7 +23,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 // PrepareCommittedSeal returns a committed seal for the given hash

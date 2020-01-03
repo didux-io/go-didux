@@ -30,7 +30,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 type TwoOperandTestcase struct {

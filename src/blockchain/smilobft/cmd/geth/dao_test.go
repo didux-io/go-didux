@@ -25,8 +25,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 // Genesis block for nodes which don't care about the DAO fork (i.e. not configured)

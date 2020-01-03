@@ -21,8 +21,8 @@ import (
 	"math/big"
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/cmn"
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/cmn"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 // notice: the normal case have been tested in integration tests.

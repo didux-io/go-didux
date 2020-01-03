@@ -26,8 +26,8 @@ import (
 
 	"strings"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
-	"go-smilo/src/blockchain/smilobft/internal/debug"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/internal/debug"
 )
 
 // AppHelpTemplate is the test template for the default, global app help topic.

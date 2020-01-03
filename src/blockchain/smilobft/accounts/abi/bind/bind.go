@@ -32,7 +32,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/accounts/abi"
+	"go-didux/src/blockchain/smilobft/accounts/abi"
 )
 
 // Lang is a target programming language selector to generate bindings for.

@@ -29,9 +29,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
-	"go-smilo/src/blockchain/smilobft/p2p/enr"
-	"go-smilo/src/blockchain/smilobft/p2p/netutil"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/enr"
+	"go-didux/src/blockchain/smilobft/p2p/netutil"
 )
 
 func TestTable_pingReplace(t *testing.T) {

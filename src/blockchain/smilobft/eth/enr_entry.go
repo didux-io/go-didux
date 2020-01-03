@@ -19,9 +19,9 @@ package eth
 import (
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/core/forkid"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core/forkid"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
 )
 
 // ethEntry is the "eth" ENR entry which advertises eth protocol

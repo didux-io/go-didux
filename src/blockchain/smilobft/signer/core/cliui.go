@@ -28,7 +28,7 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"golang.org/x/crypto/ssh/terminal"
 
-	"go-smilo/src/blockchain/smilobft/internal/ethapi"
+	"go-didux/src/blockchain/smilobft/internal/ethapi"
 )
 
 type CommandlineUI struct {

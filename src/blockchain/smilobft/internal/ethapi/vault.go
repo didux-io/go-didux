@@ -28,10 +28,10 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/core/vm"
-	"go-smilo/src/blockchain/smilobft/vault"
+	"go-didux/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/vault"
 )
 
 // GetSmiloPayload returns the contents of a private transaction

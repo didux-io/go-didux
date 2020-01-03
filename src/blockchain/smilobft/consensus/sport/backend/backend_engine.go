@@ -32,18 +32,18 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
 	"github.com/orinocopay/go-etherutils"
 
 	"golang.org/x/crypto/sha3"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
-	"go-smilo/src/blockchain/smilobft/consensus/sport/fullnode"
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/core/state"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/consensus/sport/fullnode"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core/state"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 const (

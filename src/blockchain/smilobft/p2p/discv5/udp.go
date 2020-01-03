@@ -29,8 +29,8 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/p2p/nat"
-	"go-smilo/src/blockchain/smilobft/p2p/netutil"
+	"go-didux/src/blockchain/smilobft/p2p/nat"
+	"go-didux/src/blockchain/smilobft/p2p/netutil"
 )
 
 const Version = 4

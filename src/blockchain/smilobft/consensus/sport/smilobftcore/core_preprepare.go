@@ -20,9 +20,9 @@ package smilobftcore
 import (
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/consensus"
 
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 //SPORT:2

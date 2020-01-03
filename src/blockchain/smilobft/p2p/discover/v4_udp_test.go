@@ -33,15 +33,15 @@ import (
 
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/internal/testlog"
-	"go-smilo/src/blockchain/smilobft/p2p/enr"
+	"go-didux/src/blockchain/smilobft/internal/testlog"
+	"go-didux/src/blockchain/smilobft/p2p/enr"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
 )
 
 func init() {

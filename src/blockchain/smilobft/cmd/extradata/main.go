@@ -27,11 +27,11 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/cmn"
+	"go-didux/src/blockchain/smilobft/cmn"
 )
 
 var (

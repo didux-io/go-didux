@@ -25,7 +25,7 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
 
 	goruntime "runtime"
 
@@ -35,13 +35,13 @@ import (
 
 	"math/big"
 
-	"go-smilo/src/blockchain/smilobft/cmd/evm/internal/compiler"
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/core/state"
-	"go-smilo/src/blockchain/smilobft/core/vm"
-	"go-smilo/src/blockchain/smilobft/core/vm/runtime"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/cmd/evm/internal/compiler"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core/state"
+	"go-didux/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/core/vm/runtime"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 var runCommand = cli.Command{

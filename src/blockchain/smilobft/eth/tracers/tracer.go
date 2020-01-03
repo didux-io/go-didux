@@ -31,7 +31,7 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	duktape "gopkg.in/olebedev/go-duktape.v3"
 
-	"go-smilo/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/core/vm"
 )
 
 // bigIntegerJS is the minified version of https://github.com/peterolson/BigInteger.js.

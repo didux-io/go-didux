@@ -28,7 +28,7 @@ import (
 
 	"golang.org/x/crypto/sha3"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 func rlpHash(x interface{}) (h common.Hash) {

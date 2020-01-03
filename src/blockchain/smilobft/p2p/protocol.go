@@ -19,8 +19,8 @@ package p2p
 import (
 	"fmt"
 
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
-	"go-smilo/src/blockchain/smilobft/p2p/enr"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/enr"
 )
 
 // Protocol represents a P2P subprotocol implementation.

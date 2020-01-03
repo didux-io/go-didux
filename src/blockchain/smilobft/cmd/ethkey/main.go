@@ -22,7 +22,7 @@ import (
 
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
 )
 
 const (

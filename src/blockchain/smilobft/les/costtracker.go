@@ -23,9 +23,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/eth"
-	"go-smilo/src/blockchain/smilobft/ethdb"
-	"go-smilo/src/blockchain/smilobft/les/flowcontrol"
+	"go-didux/src/blockchain/smilobft/eth"
+	"go-didux/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/les/flowcontrol"
 
 	"github.com/ethereum/go-ethereum/common/mclock"
 	"github.com/ethereum/go-ethereum/log"

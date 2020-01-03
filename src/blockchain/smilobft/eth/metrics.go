@@ -19,7 +19,7 @@ package eth
 import (
 	"github.com/ethereum/go-ethereum/metrics"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p"
 )
 
 var (

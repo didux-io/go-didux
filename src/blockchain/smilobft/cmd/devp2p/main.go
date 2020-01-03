@@ -21,8 +21,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"go-smilo/src/blockchain/smilobft/internal/debug"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/internal/debug"
+	"go-didux/src/blockchain/smilobft/params"
 
 	"gopkg.in/urfave/cli.v1"
 )

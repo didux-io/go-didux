@@ -21,7 +21,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // Tests that batched bloom bits are correctly rotated from the input bloom

@@ -19,9 +19,9 @@ package simulations
 import (
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/node"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
-	"go-smilo/src/blockchain/smilobft/p2p/simulations/adapters"
+	"go-didux/src/blockchain/smilobft/node"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/simulations/adapters"
 )
 
 func newTestNetwork(t *testing.T, nodeCount int) (*Network, []enode.ID) {

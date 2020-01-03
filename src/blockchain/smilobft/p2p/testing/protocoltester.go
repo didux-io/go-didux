@@ -35,13 +35,13 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/node"
-	"go-smilo/src/blockchain/smilobft/p2p"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
-	"go-smilo/src/blockchain/smilobft/p2p/simulations"
-	"go-smilo/src/blockchain/smilobft/p2p/simulations/adapters"
+	"go-didux/src/blockchain/smilobft/node"
+	"go-didux/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/simulations"
+	"go-didux/src/blockchain/smilobft/p2p/simulations/adapters"
 )
 
 // ProtocolTester is the tester environment used for unit testing protocol

@@ -21,7 +21,7 @@ import (
 	"strings"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p"
 
 	"github.com/ethereum/go-ethereum/metrics"
 

@@ -27,9 +27,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/event"
 
-	"go-smilo/src/blockchain/smilobft"
-	"go-smilo/src/blockchain/smilobft/accounts/abi"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft"
+	"go-didux/src/blockchain/smilobft/accounts/abi"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // SignerFn is a signer function callback when a contract requires a method to

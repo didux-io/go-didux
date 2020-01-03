@@ -24,7 +24,7 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/ethdb"
 )
 
 // NodeSet stores a set of trie nodes. It implements trie.Database and can also

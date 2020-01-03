@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"go-smilo/src/blockchain/smilobft/core/asm"
+	"go-didux/src/blockchain/smilobft/core/asm"
 )
 
 func Compile(fn string, src []byte, debug bool) (string, error) {

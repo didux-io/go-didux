@@ -23,7 +23,7 @@ import (
 
 	cli "gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/cmd/evm/internal/compiler"
+	"go-didux/src/blockchain/smilobft/cmd/evm/internal/compiler"
 )
 
 var compileCommand = cli.Command{

@@ -21,7 +21,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common/bitutil"
 
-	"go-smilo/src/blockchain/smilobft/light"
+	"go-didux/src/blockchain/smilobft/light"
 )
 
 const (

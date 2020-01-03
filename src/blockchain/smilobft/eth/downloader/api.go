@@ -22,9 +22,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/event"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft"
+	"go-didux/src/blockchain/smilobft"
 )
 
 // PublicDownloaderAPI provides an API which gives information about the current synchronisation status.

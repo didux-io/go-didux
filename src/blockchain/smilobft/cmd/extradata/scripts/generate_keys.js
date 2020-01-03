@@ -29,7 +29,7 @@ const Wallet = require('ethereumjs-wallet');
 
 const GOPATH = process.env.GOPATH || "/opt/gocode";
 
-const smiloPATH = `${GOPATH}/src/go-smilo/src/blockchain/smilobft`;
+const smiloPATH = `${GOPATH}/src/go-didux/src/blockchain/smilobft`;
 const blackboxPATH = `${GOPATH}/src/Smilo-blackbox`;
 
 

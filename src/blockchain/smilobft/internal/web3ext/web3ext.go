@@ -530,6 +530,12 @@ web3._extend({
 			inputFormatter: [null, null]
 		}),
 		new web3._extend.Method({
+			name: 'shareRawTransactionVault',
+			call: 'eth_shareRawTransactionVault',
+			params: 2,
+			inputFormatter: [null, null]
+		}),
+		new web3._extend.Method({
 			name: 'storageRoot',
 			call: 'eth_storageRoot',
 			params: 2,

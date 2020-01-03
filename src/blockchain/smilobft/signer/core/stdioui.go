@@ -23,9 +23,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/internal/ethapi"
+	"go-didux/src/blockchain/smilobft/internal/ethapi"
 )
 
 type StdIOUI struct {

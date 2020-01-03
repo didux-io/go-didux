@@ -23,14 +23,14 @@ import (
 	"strings"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/accounts/scwallet"
+	"go-didux/src/blockchain/smilobft/accounts/scwallet"
 
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/robertkrimen/otto"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/accounts/usbwallet"
+	"go-didux/src/blockchain/smilobft/accounts/usbwallet"
 )
 
 // bridge is a collection of JavaScript utility methods to bride the .js runtime

@@ -33,7 +33,7 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/pborman/uuid"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts"
 )
 
 const (

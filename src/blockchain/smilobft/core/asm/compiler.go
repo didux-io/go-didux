@@ -24,7 +24,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common/math"
 
-	"go-smilo/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/core/vm"
 )
 
 // Compiler contains information about the parsed source

@@ -27,8 +27,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"go-smilo/src/blockchain/smilobft/cmn"
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/cmn"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 var (

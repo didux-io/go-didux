@@ -31,17 +31,17 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
 	"errors"
 
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
-	"go-smilo/src/blockchain/smilobft/core/state"
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/internal/ethapi"
-	"go-smilo/src/blockchain/smilobft/params"
-	"go-smilo/src/blockchain/smilobft/trie"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/core/state"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/internal/ethapi"
+	"go-didux/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/trie"
 )
 
 // PublicEthereumAPI provides an API to access Ethereum full node-related

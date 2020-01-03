@@ -17,7 +17,7 @@
 package vm
 
 import (
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 func minSwapStack(n int) int {

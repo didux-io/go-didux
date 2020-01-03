@@ -21,16 +21,16 @@ import (
 	"errors"
 	"math/big"
 
-	"go-smilo/src/blockchain/smilobft/cmn"
+	"go-didux/src/blockchain/smilobft/cmn"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/math"
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/core/vm"
 
-	"go-smilo/src/blockchain/smilobft/params"
-	"go-smilo/src/blockchain/smilobft/vault"
+	"go-didux/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/vault"
 )
 
 var (

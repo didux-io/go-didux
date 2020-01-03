@@ -16,7 +16,7 @@
 
 package downloader
 
-import "go-smilo/src/blockchain/smilobft/core/types"
+import "go-didux/src/blockchain/smilobft/core/types"
 
 type DoneEvent struct {
 	Latest *types.Header

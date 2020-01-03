@@ -11,10 +11,10 @@ fi
 workspace="$PWD/build/_workspace"
 root="$PWD"
 ethdir="$workspace/src"
-if [ ! -L "$ethdir/go-smilo" ]; then
+if [ ! -L "$ethdir/go-didux" ]; then
     mkdir -p "$ethdir"
     cd "$ethdir"
-    ln -s ../../../. go-smilo
+    ln -s ../../../. go-didux
     cd "$root"
 fi
 
@@ -23,8 +23,8 @@ GOPATH="$workspace"
 export GOPATH
 
 # Run the command inside the workspace.
-cd "$ethdir/go-smilo"
-PWD="$ethdir/go-smilo"
+cd "$ethdir/go-didux"
+PWD="$ethdir/go-didux"
 
 # Launch the arguments with the configured environment.
 exec "$@"

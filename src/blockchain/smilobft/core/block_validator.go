@@ -21,12 +21,12 @@ import (
 
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 
-	"go-smilo/src/blockchain/smilobft/core/state"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/core/state"
+	"go-didux/src/blockchain/smilobft/params"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/consensus"
 )
 
 // BlockValidator is responsible for validating block headers, uncles and

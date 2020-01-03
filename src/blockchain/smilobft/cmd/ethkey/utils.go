@@ -22,12 +22,12 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
 
 	"github.com/ethereum/go-ethereum/crypto"
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/console"
+	"go-didux/src/blockchain/smilobft/console"
 )
 
 // promptPassphrase prompts the user for a passphrase.  Set confirmation to true

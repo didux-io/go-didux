@@ -37,9 +37,9 @@ import (
 	"github.com/ethereum/go-ethereum/metrics"
 	"github.com/hashicorp/golang-lru/simplelru"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/consensus"
 )
 
 var ErrInvalidDumpMagic = errors.New("invalid dump magic")

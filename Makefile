@@ -81,8 +81,8 @@ coveralls: ## Runs tests on ./src/ with HTML code coverage
 	$(GOPATH)/bin/goveralls -coverprofile=coverage-all.out -service=travis-ci -repotoken $(COVERALLS_TOKEN)
 
 doc:
-	godoc2md go-smilo/src/model > ./docs/model.md
-	godoc2md go-smilo/src/server > ./docs/server.md
+	godoc2md go-didux/src/model > ./docs/model.md
+	godoc2md go-didux/src/server > ./docs/server.md
 	$(foreach pkg,$(PACKAGES_ETH),\
 	    rm -rf $(PWD)/docs/$(pkg); mkdir -p $(PWD)/docs/$(pkg); \
 		godoc2md  go-smilo/$(pkg) > $(PWD)/docs/$(pkg).md;)
@@ -123,7 +123,11 @@ geth-link: unlink eth
 
 geth: eth
 	@echo "Done building."
-	@echo "Run \"$(GOBIN)/geth\" to launch geth."
+	@echo "Run \"$(GOBIN)/go-didux\" to launch go-didux."
+
+go-didux: clean geth-linux-amd64 geth-darwin-amd64 geth-linux-arm64 geth-linux-arm-6 geth-linux-arm-7
+	@echo "Done building."
+	@echo "Run \"$(GOBIN)/go-didux\" to launch go-didux."
 
 android:
 #	export ANDROID_NDK_HOME=~/Downloads/android-studio/plugins/android-ndk/ # or replace it with your NDK_HOME, see: https://developer.android.com/ndk/guides/index.html
@@ -155,8 +159,8 @@ devtools:
 	@type "protoc" 2> /dev/null || echo 'Please install protoc'
 
 generate:
-	src/blockchain/smilobft/build/env.sh go generate go-smilo/src/blockchain/smilobft
-	src/blockchain/smilobft/build/env.sh go generate go-smilo/src/blockchain/smilobft/internal/jsre/deps
+	src/blockchain/smilobft/build/env.sh go generate go-didux/src/blockchain/smilobft
+	src/blockchain/smilobft/build/env.sh go generate go-didux/src/blockchain/smilobft/internal/jsre/deps
 	src/blockchain/smilobft/build/env.sh go generate ./src/blockchain/smilobft/...
 
 

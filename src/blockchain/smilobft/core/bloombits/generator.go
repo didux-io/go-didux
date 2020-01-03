@@ -19,7 +19,7 @@ package bloombits
 import (
 	"errors"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 var (

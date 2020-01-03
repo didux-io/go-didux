@@ -21,7 +21,7 @@ package geth
 import (
 	"errors"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p"
 )
 
 // NodeInfo represents pi short summary of the information known about the host.

@@ -40,14 +40,14 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"golang.org/x/crypto/pbkdf2"
 
-	"go-smilo/src/blockchain/smilobft/whisper/mailserver"
-	whisper "go-smilo/src/blockchain/smilobft/whisper/whisperv6"
+	"go-didux/src/blockchain/smilobft/whisper/mailserver"
+	whisper "go-didux/src/blockchain/smilobft/whisper/whisperv6"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
-	"go-smilo/src/blockchain/smilobft/console"
-	"go-smilo/src/blockchain/smilobft/p2p"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
-	"go-smilo/src/blockchain/smilobft/p2p/nat"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/console"
+	"go-didux/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/nat"
 )
 
 const quitCommand = "~Q"

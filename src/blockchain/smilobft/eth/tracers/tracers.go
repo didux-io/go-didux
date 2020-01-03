@@ -21,7 +21,7 @@ import (
 	"strings"
 	"unicode"
 
-	"go-smilo/src/blockchain/smilobft/eth/tracers/internal/tracers"
+	"go-didux/src/blockchain/smilobft/eth/tracers/internal/tracers"
 )
 
 // all contains all the built in JavaScript tracers by name.

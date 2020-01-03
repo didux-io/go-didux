@@ -19,10 +19,10 @@ package clique
 import (
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // API is a user facing RPC API to allow controlling the signer and voting
