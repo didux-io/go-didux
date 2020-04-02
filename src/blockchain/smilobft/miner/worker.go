@@ -363,7 +363,6 @@ func (self *worker) wait() {
 			vaultStateRoot, _ := work.vaultState.Commit(self.chainConfig.IsEIP158(block.Number()))
 			core.WriteVaultStateRoot(self.chainDb, block.Root(), vaultStateRoot)
 			allReceipts := mergeReceipts(work.receipts, work.vaultReceipts)
-
 			stat, err := self.chain.WriteBlockWithState(block, allReceipts, work.state, nil)
 			if err != nil {
 				log.Error("Failed writWriteBlockAndStating block to chain", "err", err)
