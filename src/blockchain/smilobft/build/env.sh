@@ -27,4 +27,5 @@ cd "$ethdir/go-didux"
 PWD="$ethdir/go-didux"
 
 # Launch the arguments with the configured environment.
+export GO111MODULE=off
 exec "$@"
