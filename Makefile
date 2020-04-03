@@ -18,7 +18,7 @@ SRC_DIR="src/blockchain/smilobft"
 
 
 GOBIN=$(shell pwd)/build/bin
-GO ?= 1.12
+GO?=1.12
 
 build: clean
 	go build -o go-didux main.go
