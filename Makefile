@@ -125,7 +125,7 @@ geth: eth
 	@echo "Done building."
 	@echo "Run \"$(GOBIN)/go-didux\" to launch go-didux."
 
-go-didux: clean geth-linux-amd64 geth-darwin-amd64 geth-linux-arm64 geth-linux-arm-6 geth-linux-arm-7
+go-didux: clean geth-linux-amd64 geth-linux-386 geth-darwin
 	@echo "Done building."
 	@echo "Run \"$(GOBIN)/go-didux\" to launch go-didux."
 
