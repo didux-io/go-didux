@@ -28,7 +28,7 @@ import (
 	"github.com/ethereum/go-ethereum/event"
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts"
 )
 
 // LedgerScheme is the protocol scheme prefixing account and wallet URLs.

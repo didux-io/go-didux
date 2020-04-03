@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"os"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
 
 	"github.com/ethereum/go-ethereum/common/fdlimit"
 	"github.com/ethereum/go-ethereum/log"

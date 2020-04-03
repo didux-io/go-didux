@@ -20,9 +20,9 @@ import (
 	"encoding/binary"
 	"sync/atomic"
 
-	"go-smilo/src/blockchain/smilobft/accounts/abi/bind"
-	"go-smilo/src/blockchain/smilobft/contracts/checkpointoracle"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/accounts/abi/bind"
+	"go-didux/src/blockchain/smilobft/contracts/checkpointoracle"
+	"go-didux/src/blockchain/smilobft/params"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"

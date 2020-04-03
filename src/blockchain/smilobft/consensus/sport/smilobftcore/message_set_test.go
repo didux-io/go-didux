@@ -23,8 +23,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/cmn"
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/cmn"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 func TestMessageSetWithPreprepare(t *testing.T) {

@@ -19,7 +19,7 @@ package core
 import (
 	"runtime"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // senderCacher is a concurrent transaction sender recoverer and cacher.

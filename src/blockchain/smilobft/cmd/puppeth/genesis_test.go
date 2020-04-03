@@ -26,7 +26,7 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
-	"go-smilo/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core"
 )
 
 // Tests the go-ethereum to Aleth chainspec conversion for the Stureby testnet.

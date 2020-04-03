@@ -23,8 +23,8 @@ import (
 
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/accounts/keystore"
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/accounts/keystore"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
 )
 
 var newPassphraseFlag = cli.StringFlag{

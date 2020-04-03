@@ -19,7 +19,7 @@ package downloader
 import (
 	"fmt"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // peerDropFn is a callback type for dropping a peer detected as malicious.

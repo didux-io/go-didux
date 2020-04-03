@@ -20,7 +20,7 @@ package smilobftcore
 import (
 	"reflect"
 
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 func (c *core) sendPrepare() {

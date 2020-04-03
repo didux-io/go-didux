@@ -25,8 +25,8 @@ import (
 	"runtime"
 	"strings"
 
-	"go-smilo/src/blockchain/smilobft/accounts/external"
-	"go-smilo/src/blockchain/smilobft/accounts/scwallet"
+	"go-didux/src/blockchain/smilobft/accounts/external"
+	"go-didux/src/blockchain/smilobft/accounts/scwallet"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
@@ -34,13 +34,13 @@ import (
 
 	"sync"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/accounts/keystore"
-	"go-smilo/src/blockchain/smilobft/accounts/usbwallet"
-	"go-smilo/src/blockchain/smilobft/p2p"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts/keystore"
+	"go-didux/src/blockchain/smilobft/accounts/usbwallet"
+	"go-didux/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
 )
 
 const (

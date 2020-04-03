@@ -16,7 +16,7 @@
 
 package bind
 
-import "go-smilo/src/blockchain/smilobft/accounts/abi"
+import "go-didux/src/blockchain/smilobft/accounts/abi"
 
 // tmplData is the data structure required to fill the binding template.
 type tmplData struct {
@@ -88,12 +88,12 @@ import (
 	"math/big"
 	"strings"
 
-	ethereum "go-smilo/src/blockchain/smilobft"
+	ethereum "go-didux/src/blockchain/smilobft"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/event"
-	"go-smilo/src/blockchain/smilobft/accounts/abi"
-	"go-smilo/src/blockchain/smilobft/accounts/abi/bind"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/accounts/abi"
+	"go-didux/src/blockchain/smilobft/accounts/abi/bind"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

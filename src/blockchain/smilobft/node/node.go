@@ -28,17 +28,17 @@ import (
 
 	"github.com/prometheus/tsdb/fileutil"
 
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
 
 	"github.com/ethereum/go-ethereum/event"
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/ethdb"
-	"go-smilo/src/blockchain/smilobft/internal/debug"
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/internal/debug"
+	"go-didux/src/blockchain/smilobft/p2p"
 )
 
 // Node is a container on which services can be registered.

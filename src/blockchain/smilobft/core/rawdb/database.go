@@ -23,9 +23,9 @@ import (
 	"os"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/ethdb"
-	"go-smilo/src/blockchain/smilobft/ethdb/leveldb"
-	"go-smilo/src/blockchain/smilobft/ethdb/memorydb"
+	"go-didux/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/ethdb/leveldb"
+	"go-didux/src/blockchain/smilobft/ethdb/memorydb"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/log"

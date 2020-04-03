@@ -27,17 +27,16 @@ import (
 	"github.com/patrickmn/go-cache"
 )
 
-func (b *Blackbox) Post(data []byte, from string, to []string) (out []byte, err error) {
+func (b *Blackbox) PostRaw(data []byte, from string, to []string) (out []byte, err error) {
 	if b == nil || b.isBlackboxNotInUse {
 		log.Error("Could not start Blackbox, Post, PostData, ", "b", b, "error", ErrBlackboxIsNotStarted)
 		return nil, ErrBlackboxIsNotStarted
 	}
-	out, err = b.node.PostData(data, from, to)
+	out, err = b.node.PostDataRaw(data, from, to)
 	if err != nil {
-		log.Error("Could Post to Blackbox, Post, PostData, ", "error", err)
+		log.Error("Could not Post to Blackbox, Post, PostDataRaw, ", "error", err)
 		return nil, err
 	}
-	b.cache.Set(string(out), data, cache.DefaultExpiration)
 	return out, nil
 }
 
@@ -104,7 +103,7 @@ func New(path string) (*Blackbox, error) {
 	}
 	return &Blackbox{
 		node:               n,
-		cache:              cache.New(5*time.Minute, 5*time.Minute),
+		cache:              cache.New(1*time.Minute, 1*time.Minute),
 		isBlackboxNotInUse: false,
 	}, nil
 }

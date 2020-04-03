@@ -23,7 +23,7 @@ import (
 
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/ethclient"
+	"go-didux/src/blockchain/smilobft/ethclient"
 )
 
 var (

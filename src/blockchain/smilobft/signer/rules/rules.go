@@ -25,10 +25,10 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/robertkrimen/otto"
 
-	"go-smilo/src/blockchain/smilobft/internal/ethapi"
-	"go-smilo/src/blockchain/smilobft/signer/core"
-	"go-smilo/src/blockchain/smilobft/signer/rules/deps"
-	"go-smilo/src/blockchain/smilobft/signer/storage"
+	"go-didux/src/blockchain/smilobft/internal/ethapi"
+	"go-didux/src/blockchain/smilobft/signer/core"
+	"go-didux/src/blockchain/smilobft/signer/rules/deps"
+	"go-didux/src/blockchain/smilobft/signer/storage"
 )
 
 var (

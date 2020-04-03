@@ -27,13 +27,13 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 
 	"github.com/ethereum/go-ethereum/common"
 
-	ethereum "go-smilo/src/blockchain/smilobft"
-	"go-smilo/src/blockchain/smilobft/accounts/abi"
-	"go-smilo/src/blockchain/smilobft/accounts/abi/bind"
+	ethereum "go-didux/src/blockchain/smilobft"
+	"go-didux/src/blockchain/smilobft/accounts/abi"
+	"go-didux/src/blockchain/smilobft/accounts/abi/bind"
 )
 
 type mockCaller struct {

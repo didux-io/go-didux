@@ -30,8 +30,8 @@ import (
 	"testing"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/accounts/keystore"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/accounts/keystore"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // Tests that the account management snippets work correctly.

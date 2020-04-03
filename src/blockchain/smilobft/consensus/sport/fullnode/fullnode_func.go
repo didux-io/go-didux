@@ -20,7 +20,7 @@ package fullnode
 import (
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 func calcSeed(fullnodeSet sport.FullnodeSet, speaker common.Address, round uint64) uint64 {

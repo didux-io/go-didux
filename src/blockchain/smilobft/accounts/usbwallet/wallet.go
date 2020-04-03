@@ -31,9 +31,9 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/karalabe/usb"
 
-	ethereum "go-smilo/src/blockchain/smilobft"
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	ethereum "go-didux/src/blockchain/smilobft"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // Maximum time between wallet health checks to detect USB unplugs.

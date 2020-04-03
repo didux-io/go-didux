@@ -21,7 +21,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"go-smilo/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/core/vm"
 )
 
 // Iterator for disassembled EVM instructions

@@ -20,13 +20,13 @@ package core
 import (
 	"math/big"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 
-	"go-smilo/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/core/vm"
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/consensus"
 )
 
 // ChainContext supports retrieving headers and consensus parameters from the

@@ -24,7 +24,7 @@ import (
 
 	cli "gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/core/asm"
+	"go-didux/src/blockchain/smilobft/core/asm"
 )
 
 var disasmCommand = cli.Command{

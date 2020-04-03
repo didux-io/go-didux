@@ -58,8 +58,8 @@ import (
 	"strings"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/internal/build"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/internal/build"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 var (
@@ -199,7 +199,7 @@ func doInstall(cmdline []string) {
 	var (
 		arch   = flag.String("arch", "", "Architecture to cross build for")
 		cc     = flag.String("cc", "", "C compiler to cross build with")
-		rename = flag.Bool("rename", false, "Rename build files to Didux version (adds prefix s in front, eg: sgeth)")
+		rename = flag.Bool("rename", true, "Rename build files to Didux version (eg: go-didux)")
 	)
 	flag.CommandLine.Parse(cmdline)
 	env := build.Env()
@@ -213,7 +213,7 @@ func doInstall(cmdline []string) {
 
 		if minor < 9 {
 			log.Println("You have Go version", runtime.Version())
-			log.Println("go-ethereum requires at least Go version 1.9 and cannot")
+			log.Println("go-didux requires at least Go version 1.9 and cannot")
 			log.Println("be compiled with an earlier version. Please upgrade your Go installation.")
 			os.Exit(1)
 		}
@@ -272,28 +272,41 @@ func doRename(rename bool) {
 	if rename {
 		fmt.Println("**** Going to rename geth files to Didux custom ****")
 		if _, err := os.Stat(filepath.Join(GOBIN, "abigen")); !os.IsNotExist(err) {
-			os.Rename(filepath.Join(GOBIN, "abigen"), filepath.Join(GOBIN, "sabigen"))
+			os.Rename(filepath.Join(GOBIN, "abigen"), filepath.Join(GOBIN, "didux-abigen"))
 		}
 		if _, err := os.Stat(filepath.Join(GOBIN, "bootnode")); !os.IsNotExist(err) {
-			os.Rename(filepath.Join(GOBIN, "bootnode"), filepath.Join(GOBIN, "sbootnode"))
+			os.Rename(filepath.Join(GOBIN, "bootnode"), filepath.Join(GOBIN, "didux-bootnode"))
 		}
 		if _, err := os.Stat(filepath.Join(GOBIN, "evm")); !os.IsNotExist(err) {
-			os.Rename(filepath.Join(GOBIN, "evm"), filepath.Join(GOBIN, "sevm"))
+			os.Rename(filepath.Join(GOBIN, "evm"), filepath.Join(GOBIN, "didux-evm"))
 		}
 		if _, err := os.Stat(filepath.Join(GOBIN, "geth")); !os.IsNotExist(err) {
-			os.Rename(filepath.Join(GOBIN, "geth"), filepath.Join(GOBIN, "sgeth"))
+			os.Rename(filepath.Join(GOBIN, "geth"), filepath.Join(GOBIN, "go-didux"))
 		}
 		if _, err := os.Stat(filepath.Join(GOBIN, "puppeth")); !os.IsNotExist(err) {
-			os.Rename(filepath.Join(GOBIN, "puppeth"), filepath.Join(GOBIN, "spuppeth"))
+			os.Rename(filepath.Join(GOBIN, "puppeth"), filepath.Join(GOBIN, "didux-puppeth"))
 		}
 		if _, err := os.Stat(filepath.Join(GOBIN, "rlpdump")); !os.IsNotExist(err) {
-			os.Rename(filepath.Join(GOBIN, "rlpdump"), filepath.Join(GOBIN, "srlpdump"))
+			os.Rename(filepath.Join(GOBIN, "rlpdump"), filepath.Join(GOBIN, "didux-rlpdump"))
 		}
 		if _, err := os.Stat(filepath.Join(GOBIN, "wnode")); !os.IsNotExist(err) {
-			os.Rename(filepath.Join(GOBIN, "wnode"), filepath.Join(GOBIN, "swnode"))
+			os.Rename(filepath.Join(GOBIN, "wnode"), filepath.Join(GOBIN, "didux-wnode"))
 		}
 		if _, err := os.Stat(filepath.Join(GOBIN, "clef")); !os.IsNotExist(err) {
-			os.Rename(filepath.Join(GOBIN, "clef"), filepath.Join(GOBIN, "sclef"))
+			os.Rename(filepath.Join(GOBIN, "clef"), filepath.Join(GOBIN, "didux-clef"))
+		}
+
+		if _, err := os.Stat(filepath.Join(GOBIN, "geth")); !os.IsNotExist(err) {
+			os.Rename(filepath.Join(GOBIN, "geth-linux-amd64"), filepath.Join(GOBIN, "go-didux-linux-amd64"))
+		}
+		if _, err := os.Stat(filepath.Join(GOBIN, "geth")); !os.IsNotExist(err) {
+			os.Rename(filepath.Join(GOBIN, "geth-darwin-10.6-amd64"), filepath.Join(GOBIN, "go-didux-darwin-10.6-amd64"))
+		}
+		if _, err := os.Stat(filepath.Join(GOBIN, "geth")); !os.IsNotExist(err) {
+			os.Rename(filepath.Join(GOBIN, "geth-linux-7"), filepath.Join(GOBIN, "go-didux-linux-7"))
+		}
+		if _, err := os.Stat(filepath.Join(GOBIN, "geth")); !os.IsNotExist(err) {
+			os.Rename(filepath.Join(GOBIN, "geth-linux-arm64"), filepath.Join(GOBIN, "go-didux-linux-arm64"))
 		}
 		fmt.Println("**** Done renaming geth files to Didux custom ****")
 
@@ -638,7 +651,7 @@ func (d debExecutable) Package() string {
 func newDebMetadata(distro, author string, env build.Environment, t time.Time, name string, version string, exes []debExecutable) debMetadata {
 	if author == "" {
 		// No signing key, use default author.
-		author = "Smilo Developers <smilodevelopers@gmail.com>"
+		author = "Didux Developers <info@didux.io>"
 	}
 	return debMetadata{
 		PackageName: name,
@@ -822,7 +835,7 @@ func doAndroidArchive(cmdline []string) {
 	}
 	// Build the Android archive and Maven resources
 	build.MustRun(goTool("get", "golang.org/x/mobile/cmd/gomobile", "golang.org/x/mobile/cmd/gobind"))
-	build.MustRun(gomobileTool("bind", "-ldflags", "-s -w", "--target", "android", "--javapkg", "org.smilo", "-v", "go-smilo/src/blockchain/smilobft/mobile"))
+	build.MustRun(gomobileTool("bind", "-ldflags", "-s -w", "--target", "android", "--javapkg", "org.smilo", "-v", "go-didux/src/blockchain/smilobft/mobile"))
 
 	if *local {
 		// If we're building locally, copy bundle to build dir and skip Maven
@@ -943,7 +956,7 @@ func doXCodeFramework(cmdline []string) {
 	// Build the iOS XCode framework
 	build.MustRun(goTool("get", "golang.org/x/mobile/cmd/gomobile", "golang.org/x/mobile/cmd/gobind"))
 	build.MustRun(gomobileTool("init"))
-	bind := gomobileTool("bind", "-ldflags", "-s -w", "--target", "ios", "--tags", "ios", "-v", "go-smilo/src/blockchain/smilobft/mobile")
+	bind := gomobileTool("bind", "-ldflags", "-s -w", "--target", "ios", "--tags", "ios", "-v", "go-didux/src/blockchain/smilobft/mobile")
 
 	if *local {
 		// If we're building locally, use the build folder and stop afterwards

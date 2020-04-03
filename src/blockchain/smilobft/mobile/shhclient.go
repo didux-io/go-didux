@@ -19,9 +19,9 @@
 package geth
 
 import (
-	"go-smilo/src/blockchain/smilobft/whisper/shhclient"
+	"go-didux/src/blockchain/smilobft/whisper/shhclient"
 
-	whisper "go-smilo/src/blockchain/smilobft/whisper/whisperv6"
+	whisper "go-didux/src/blockchain/smilobft/whisper/whisperv6"
 )
 
 // WhisperClient provides access to the Ethereum APIs.

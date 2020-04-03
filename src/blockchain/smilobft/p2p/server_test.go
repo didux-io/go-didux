@@ -26,15 +26,15 @@ import (
 	"testing"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/internal/testlog"
+	"go-didux/src/blockchain/smilobft/internal/testlog"
 
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/log"
 
 	"golang.org/x/crypto/sha3"
 
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
-	"go-smilo/src/blockchain/smilobft/p2p/enr"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/enr"
 )
 
 // func init() {

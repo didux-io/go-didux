@@ -28,8 +28,8 @@ import (
 
 	mapset "github.com/deckarep/golang-set"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/p2p"
 )
 
 var (

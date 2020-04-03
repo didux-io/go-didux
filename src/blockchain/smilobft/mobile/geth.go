@@ -24,19 +24,19 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/eth"
-	"go-smilo/src/blockchain/smilobft/eth/downloader"
-	"go-smilo/src/blockchain/smilobft/ethclient"
-	"go-smilo/src/blockchain/smilobft/ethstats"
-	"go-smilo/src/blockchain/smilobft/internal/debug"
-	"go-smilo/src/blockchain/smilobft/les"
-	"go-smilo/src/blockchain/smilobft/node"
-	"go-smilo/src/blockchain/smilobft/p2p"
-	"go-smilo/src/blockchain/smilobft/p2p/nat"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/eth"
+	"go-didux/src/blockchain/smilobft/eth/downloader"
+	"go-didux/src/blockchain/smilobft/ethclient"
+	"go-didux/src/blockchain/smilobft/ethstats"
+	"go-didux/src/blockchain/smilobft/internal/debug"
+	"go-didux/src/blockchain/smilobft/les"
+	"go-didux/src/blockchain/smilobft/node"
+	"go-didux/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p/nat"
+	"go-didux/src/blockchain/smilobft/params"
 
-	whisper "go-smilo/src/blockchain/smilobft/whisper/whisperv6"
+	whisper "go-didux/src/blockchain/smilobft/whisper/whisperv6"
 )
 
 // NodeConfig represents the collection of configuration values to fine tune the Geth

@@ -27,18 +27,18 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/eth/downloader"
-	"go-smilo/src/blockchain/smilobft/les"
+	"go-didux/src/blockchain/smilobft/eth/downloader"
+	"go-didux/src/blockchain/smilobft/les"
 
 	"github.com/ethereum/go-ethereum/metrics"
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/accounts/keystore"
-	"go-smilo/src/blockchain/smilobft/eth"
-	"go-smilo/src/blockchain/smilobft/ethclient"
-	"go-smilo/src/blockchain/smilobft/internal/debug"
-	"go-smilo/src/blockchain/smilobft/node"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts/keystore"
+	"go-didux/src/blockchain/smilobft/eth"
+	"go-didux/src/blockchain/smilobft/ethclient"
+	"go-didux/src/blockchain/smilobft/internal/debug"
+	"go-didux/src/blockchain/smilobft/node"
 
 	"github.com/ethereum/go-ethereum/log"
 
@@ -46,12 +46,12 @@ import (
 
 	"github.com/elastic/gosigar"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
 
 	"math"
 	"strconv"
 
-	"go-smilo/src/blockchain/smilobft/console"
+	"go-didux/src/blockchain/smilobft/console"
 )
 
 const (
@@ -212,7 +212,7 @@ func init() {
 	// Initialize the CLI app and start Geth
 	app.Action = geth
 	app.HideVersion = true // we have a command to print the version
-	app.Copyright = "Copyright 2013-2019 The go-ethereum Authors, Copyright 2018-2019 go-smilo Authors"
+	app.Copyright = "Copyright 2013-2019 The go-ethereum Authors, Copyright 2018-2019 go-smilo Authors, Copyright 2019-2020 go-didux Authors"
 	app.Commands = []cli.Command{
 		// See chaincmd.go:
 		initCommand,

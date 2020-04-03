@@ -43,5 +43,5 @@ var DefaultConfig = &Config{
 	SpeakerPolicy:        RoundRobin,
 	Epoch:                30000,
 	MinFunds:             1,
-	MinBlocksEmptyMining: big.NewInt(20000000),
+	MinBlocksEmptyMining: big.NewInt(1000000),
 }

@@ -22,8 +22,8 @@ import (
 	"testing"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
 
 	"github.com/ethereum/go-ethereum/common/mclock"
 )

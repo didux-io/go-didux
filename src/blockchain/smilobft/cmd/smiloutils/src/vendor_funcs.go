@@ -19,7 +19,7 @@ package src
 import (
 	"math/big"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // From geth code

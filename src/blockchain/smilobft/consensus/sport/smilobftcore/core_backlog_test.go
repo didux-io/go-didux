@@ -24,14 +24,14 @@ import (
 	"testing"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/cmn"
+	"go-didux/src/blockchain/smilobft/cmn"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/event"
 	"github.com/ethereum/go-ethereum/log"
 	"gopkg.in/karalabe/cookiejar.v2/collections/prque"
 
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 func TestCheckMessage(t *testing.T) {

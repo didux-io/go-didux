@@ -22,7 +22,7 @@ import (
 	"strings"
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/accounts/abi"
+	"go-didux/src/blockchain/smilobft/accounts/abi"
 
 	"github.com/ethereum/go-ethereum/common"
 )

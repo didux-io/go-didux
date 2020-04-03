@@ -23,7 +23,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/consensus"
 )
 
 type CpuAgent struct {

@@ -26,21 +26,21 @@ import (
 	"sync/atomic"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
 
 	"github.com/ethereum/go-ethereum/common/mclock"
 
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/params"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/eth"
-	"go-smilo/src/blockchain/smilobft/les/flowcontrol"
-	"go-smilo/src/blockchain/smilobft/light"
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/eth"
+	"go-didux/src/blockchain/smilobft/les/flowcontrol"
+	"go-didux/src/blockchain/smilobft/light"
+	"go-didux/src/blockchain/smilobft/p2p"
 )
 
 var (

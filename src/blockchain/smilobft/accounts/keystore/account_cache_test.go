@@ -31,7 +31,7 @@ import (
 	"github.com/davecgh/go-spew/spew"
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts"
 )
 
 var (

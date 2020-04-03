@@ -35,12 +35,12 @@ import (
 	"github.com/ethereum/go-ethereum/event"
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/p2p/discover"
-	"go-smilo/src/blockchain/smilobft/p2p/discv5"
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
-	"go-smilo/src/blockchain/smilobft/p2p/enr"
-	"go-smilo/src/blockchain/smilobft/p2p/nat"
-	"go-smilo/src/blockchain/smilobft/p2p/netutil"
+	"go-didux/src/blockchain/smilobft/p2p/discover"
+	"go-didux/src/blockchain/smilobft/p2p/discv5"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/enr"
+	"go-didux/src/blockchain/smilobft/p2p/nat"
+	"go-didux/src/blockchain/smilobft/p2p/netutil"
 )
 
 const (

@@ -29,7 +29,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/robertkrimen/otto"
 
-	"go-smilo/src/blockchain/smilobft/internal/jsre/deps"
+	"go-didux/src/blockchain/smilobft/internal/jsre/deps"
 )
 
 var (

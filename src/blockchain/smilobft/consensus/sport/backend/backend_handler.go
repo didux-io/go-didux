@@ -20,7 +20,7 @@ package backend
 import (
 	"errors"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/consensus"
 )
 
 const (

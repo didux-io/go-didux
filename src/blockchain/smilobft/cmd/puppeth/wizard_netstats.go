@@ -26,7 +26,7 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/olekukonko/tablewriter"
 
-	"go-smilo/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core"
 )
 
 // networkStats verifies the status of network components and generates a protip

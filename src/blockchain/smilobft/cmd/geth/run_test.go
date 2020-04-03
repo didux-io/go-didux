@@ -24,7 +24,7 @@ import (
 
 	"github.com/docker/docker/pkg/reexec"
 
-	"go-smilo/src/blockchain/smilobft/internal/cmdtest"
+	"go-didux/src/blockchain/smilobft/internal/cmdtest"
 )
 
 func tmpdir(t *testing.T) string {

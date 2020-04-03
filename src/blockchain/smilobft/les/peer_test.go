@@ -20,8 +20,8 @@ import (
 	"math/big"
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/les/flowcontrol"
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/les/flowcontrol"
+	"go-didux/src/blockchain/smilobft/p2p"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/mclock"

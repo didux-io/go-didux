@@ -26,8 +26,8 @@ import (
 	"github.com/orinocopay/go-etherutils"
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/ethclient"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/ethclient"
 )
 
 func GetValidTXGasPrice(ctx *cli.Context) (validTX *types.Transaction, gasprice int64, err error) {

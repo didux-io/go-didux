@@ -22,7 +22,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/core/vm/runtime"
+	"go-didux/src/blockchain/smilobft/core/vm/runtime"
 )
 
 func ExampleExecute() {

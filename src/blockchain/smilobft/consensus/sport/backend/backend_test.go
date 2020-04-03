@@ -30,9 +30,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
-	"go-smilo/src/blockchain/smilobft/consensus/sport/fullnode"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/consensus/sport/fullnode"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 func TestSign(t *testing.T) {

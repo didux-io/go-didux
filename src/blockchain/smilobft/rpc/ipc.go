@@ -20,7 +20,7 @@ import (
 	"context"
 	"net"
 
-	"go-smilo/src/blockchain/smilobft/p2p/netutil"
+	"go-didux/src/blockchain/smilobft/p2p/netutil"
 
 	"github.com/ethereum/go-ethereum/log"
 )

@@ -19,7 +19,7 @@ package vm
 import (
 	"fmt"
 
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 // EnableEIP enables the given EIP on the config.

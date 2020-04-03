@@ -24,7 +24,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/accounts/keystore"
+	"go-didux/src/blockchain/smilobft/accounts/keystore"
 )
 
 // deployNode creates a new node configuration based on some user input.

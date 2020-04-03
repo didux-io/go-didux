@@ -21,10 +21,10 @@ import (
 	"math/big"
 	"sync/atomic"
 
-	"go-smilo/src/blockchain/smilobft/cmn"
+	"go-didux/src/blockchain/smilobft/cmn"
 
-	"go-smilo/src/blockchain/smilobft/core/state"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/core/state"
+	"go-didux/src/blockchain/smilobft/params"
 
 	"time"
 

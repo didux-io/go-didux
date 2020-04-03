@@ -28,13 +28,13 @@ import (
 	"testing"
 	"testing/quick"
 
-	"go-smilo/src/blockchain/smilobft/core/rawdb"
+	"go-didux/src/blockchain/smilobft/core/rawdb"
 
 	"gopkg.in/check.v1"
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // Tests that updating a state trie does not leak any database writes prior to

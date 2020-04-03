@@ -32,10 +32,10 @@ import (
 	"github.com/peterh/liner"
 	"github.com/robertkrimen/otto"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/internal/jsre"
-	"go-smilo/src/blockchain/smilobft/internal/web3ext"
+	"go-didux/src/blockchain/smilobft/internal/jsre"
+	"go-didux/src/blockchain/smilobft/internal/web3ext"
 )
 
 var (

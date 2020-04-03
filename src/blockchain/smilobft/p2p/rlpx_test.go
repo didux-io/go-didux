@@ -37,7 +37,7 @@ import (
 	"github.com/ethereum/go-ethereum/rlp"
 	"golang.org/x/crypto/sha3"
 
-	"go-smilo/src/blockchain/smilobft/p2p/simulations/pipes"
+	"go-didux/src/blockchain/smilobft/p2p/simulations/pipes"
 )
 
 func TestSharedSecret(t *testing.T) {

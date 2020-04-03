@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/p2p/simulations/pipes"
+	"go-didux/src/blockchain/smilobft/p2p/simulations/pipes"
 )
 
 func TestTCPPipe(t *testing.T) {

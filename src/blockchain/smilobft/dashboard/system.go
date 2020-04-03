@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p"
 
 	"github.com/elastic/gosigar"
 	"github.com/ethereum/go-ethereum/metrics"

@@ -29,14 +29,14 @@ import (
 	"github.com/ethereum/go-ethereum/event"
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
-	"go-smilo/src/blockchain/smilobft/consensus/misc"
-	"go-smilo/src/blockchain/smilobft/core"
-	"go-smilo/src/blockchain/smilobft/core/state"
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/core/vm"
-	"go-smilo/src/blockchain/smilobft/ethdb"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/consensus/misc"
+	"go-didux/src/blockchain/smilobft/core"
+	"go-didux/src/blockchain/smilobft/core/state"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/core/vm"
+	"go-didux/src/blockchain/smilobft/ethdb"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 const (
@@ -363,7 +363,6 @@ func (self *worker) wait() {
 			vaultStateRoot, _ := work.vaultState.Commit(self.chainConfig.IsEIP158(block.Number()))
 			core.WriteVaultStateRoot(self.chainDb, block.Root(), vaultStateRoot)
 			allReceipts := mergeReceipts(work.receipts, work.vaultReceipts)
-
 			stat, err := self.chain.WriteBlockWithState(block, allReceipts, work.state, nil)
 			if err != nil {
 				log.Error("Failed writWriteBlockAndStating block to chain", "err", err)

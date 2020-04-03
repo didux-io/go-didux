@@ -22,7 +22,7 @@ package geth
 import (
 	"errors"
 
-	"go-smilo/src/blockchain/smilobft/p2p/discv5"
+	"go-didux/src/blockchain/smilobft/p2p/discv5"
 )
 
 // Enode represents a host on the network.

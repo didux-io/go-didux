@@ -32,7 +32,7 @@ import (
 
 	"golang.org/x/crypto/sha3"
 
-	"go-smilo/src/blockchain/smilobft/p2p/netutil"
+	"go-didux/src/blockchain/smilobft/p2p/netutil"
 )
 
 var (

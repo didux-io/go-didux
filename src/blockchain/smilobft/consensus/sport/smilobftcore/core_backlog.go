@@ -19,7 +19,7 @@ package smilobftcore
 import (
 	"gopkg.in/karalabe/cookiejar.v2/collections/prque"
 
-	"go-smilo/src/blockchain/smilobft/consensus/sport"
+	"go-didux/src/blockchain/smilobft/consensus/sport"
 )
 
 var (

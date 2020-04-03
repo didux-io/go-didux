@@ -20,7 +20,7 @@ import (
 	"context"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/p2p/enode"
+	"go-didux/src/blockchain/smilobft/p2p/enode"
 )
 
 // Simulation provides a framework for running actions in a simulated network

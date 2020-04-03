@@ -29,15 +29,15 @@ import (
 
 	"github.com/ethereum/go-ethereum/log"
 
-	"go-smilo/src/blockchain/smilobft/dashboard"
+	"go-didux/src/blockchain/smilobft/dashboard"
 
 	"github.com/naoina/toml"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
-	"go-smilo/src/blockchain/smilobft/eth"
-	"go-smilo/src/blockchain/smilobft/node"
-	"go-smilo/src/blockchain/smilobft/params"
-	whisper "go-smilo/src/blockchain/smilobft/whisper/whisperv6"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/eth"
+	"go-didux/src/blockchain/smilobft/node"
+	"go-didux/src/blockchain/smilobft/params"
+	whisper "go-didux/src/blockchain/smilobft/whisper/whisperv6"
 )
 
 var (

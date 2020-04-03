@@ -41,7 +41,7 @@ import (
 	"sync"
 	"time"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/accounts"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/event"

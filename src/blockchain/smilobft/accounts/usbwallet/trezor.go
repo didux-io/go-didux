@@ -34,8 +34,8 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/golang/protobuf/proto"
 
-	"go-smilo/src/blockchain/smilobft/accounts"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/accounts"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 // ErrTrezorPINNeeded is returned if opening the trezor requires a PIN code. In

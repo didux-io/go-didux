@@ -27,8 +27,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common/prque"
 
-	"go-smilo/src/blockchain/smilobft/consensus"
-	"go-smilo/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/consensus"
+	"go-didux/src/blockchain/smilobft/core/types"
 )
 
 const (

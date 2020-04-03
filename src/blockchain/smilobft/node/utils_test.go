@@ -22,9 +22,9 @@ package node
 import (
 	"reflect"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	"go-smilo/src/blockchain/smilobft/p2p"
+	"go-didux/src/blockchain/smilobft/p2p"
 )
 
 // NoopService is a trivial implementation of the Service interface.

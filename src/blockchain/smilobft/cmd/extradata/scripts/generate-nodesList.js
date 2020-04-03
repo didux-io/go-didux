@@ -26,7 +26,7 @@ const fs = require('fs');
 
 const GOPATH = process.env.GOPATH || "/opt/gocode";
 
-const smiloPATH = `${GOPATH}/src/go-smilo/src/blockchain/smilobft`;
+const smiloPATH = `${GOPATH}/src/go-didux/src/blockchain/smilobft`;
 
 
 if (process.argv.length < 4) {

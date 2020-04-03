@@ -23,7 +23,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	ethereum "go-smilo/src/blockchain/smilobft"
+	ethereum "go-didux/src/blockchain/smilobft"
 )
 
 // Subscription represents an event subscription where events are

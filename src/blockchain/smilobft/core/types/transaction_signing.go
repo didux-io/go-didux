@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/params"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
@@ -236,6 +236,7 @@ func recoverPlain(sighash common.Hash, R, S, Vb *big.Int, homestead bool, isVaul
 		return common.Address{}, ErrInvalidSig
 	}
 	var offset uint64
+	// private transaction has a v value of 37 or 38
 	if isVault {
 		offset = 37
 	} else {

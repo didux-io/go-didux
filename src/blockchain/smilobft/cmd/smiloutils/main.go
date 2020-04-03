@@ -22,7 +22,7 @@ import (
 
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/cmd/smiloutils/src"
+	"go-didux/src/blockchain/smilobft/cmd/smiloutils/src"
 )
 
 func main() {

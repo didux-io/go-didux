@@ -27,11 +27,11 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"gopkg.in/urfave/cli.v1"
 
-	"go-smilo/src/blockchain/smilobft/cmd/utils"
+	"go-didux/src/blockchain/smilobft/cmd/utils"
 
 	"github.com/ethereum/go-ethereum/common/compiler"
 
-	"go-smilo/src/blockchain/smilobft/accounts/abi/bind"
+	"go-didux/src/blockchain/smilobft/accounts/abi/bind"
 )
 
 const (

@@ -19,13 +19,13 @@ package shhclient
 import (
 	"context"
 
-	"go-smilo/src/blockchain/smilobft"
+	"go-didux/src/blockchain/smilobft"
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
 
-	"go-smilo/src/blockchain/smilobft/rpc"
+	"go-didux/src/blockchain/smilobft/rpc"
 
-	whisper "go-smilo/src/blockchain/smilobft/whisper/whisperv6"
+	whisper "go-didux/src/blockchain/smilobft/whisper/whisperv6"
 )
 
 // Client defines typed wrappers for the Whisper v6 RPC API.

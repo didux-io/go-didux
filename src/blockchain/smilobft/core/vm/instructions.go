@@ -28,8 +28,8 @@ import (
 	"github.com/ethereum/go-ethereum/common/math"
 	"golang.org/x/crypto/sha3"
 
-	"go-smilo/src/blockchain/smilobft/core/types"
-	"go-smilo/src/blockchain/smilobft/params"
+	"go-didux/src/blockchain/smilobft/core/types"
+	"go-didux/src/blockchain/smilobft/params"
 )
 
 var (

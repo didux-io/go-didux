@@ -20,7 +20,7 @@ import (
 	"bytes"
 	"testing"
 
-	"go-smilo/src/blockchain/smilobft/ethdb/memorydb"
+	"go-didux/src/blockchain/smilobft/ethdb/memorydb"
 
 	"github.com/ethereum/go-ethereum/common"
 )
