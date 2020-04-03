@@ -58,7 +58,7 @@ func RunNode(socketPath string) error {
 	return errors.New("blackbox Node API did not respond to upcheck request")
 }
 
-func (c *Client) PostData(pl []byte, b64From string, b64To []string) ([]byte, error) {
+func (c *Client) PostDataRaw(pl []byte, b64From string, b64To []string) ([]byte, error) {
 	buf := bytes.NewBuffer([]byte(base64.StdEncoding.EncodeToString(pl)))
 	req, err := http.NewRequest("POST", "http+unix://blackbox/sendraw", buf)
 	if err != nil {
@@ -85,7 +85,7 @@ func (c *Client) PostData(pl []byte, b64From string, b64To []string) ([]byte, er
 }
 
 func (c *Client) PostDataRawTransaction(signedPayload []byte, b64To []string) ([]byte, error) {
-	buf := bytes.NewBuffer(signedPayload)
+	buf := bytes.NewBuffer([]byte(base64.StdEncoding.EncodeToString(signedPayload)))
 	req, err := http.NewRequest("POST", "http+unix://blackbox/sendsignedtx", buf)
 	if err != nil {
 		return nil, err

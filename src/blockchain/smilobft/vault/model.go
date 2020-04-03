@@ -18,7 +18,7 @@
 package vault
 
 type BlackboxVault interface {
-	Post(data []byte, from string, to []string) ([]byte, error)
+	PostRaw(data []byte, from string, to []string) ([]byte, error)
 	PostRawTransaction(data []byte, to []string) ([]byte, error)
 	Get(data []byte) ([]byte, error)
 }

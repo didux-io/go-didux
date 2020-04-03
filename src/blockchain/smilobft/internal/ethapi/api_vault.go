@@ -52,9 +52,9 @@ func (s *PublicTransactionPoolAPI) ShareRawTransactionVault(ctx context.Context,
 
 	if isVault {
 		if len(data) > 0 {
-			log.Info("Share vault tx", "data", fmt.Sprintf("%x", data), "vaultfrom", args.SharedWith, "sharedwith", args.SharedWith)
-			data, err := vault.VaultInstance.Post(data, "", args.SharedWith)
-			log.Info("Shared vault tx result", "data", fmt.Sprintf("%x", data), "vaultfrom", args.SharedWith, "sharedwith", args.SharedWith)
+			log.Info("Share vault tx", "data", fmt.Sprintf("%x", data), "vaultfrom", "", "sharedwith", args.SharedWith)
+			data, err := vault.VaultInstance.PostRaw(data, "", args.SharedWith)
+			log.Info("Shared vault tx result", "data", fmt.Sprintf("%x", data), "vaultfrom", "", "sharedwith", args.SharedWith)
 
 			if err != nil {
 				return "", err
@@ -85,7 +85,7 @@ func (s *PublicTransactionPoolAPI) SendRawTransactionVault(ctx context.Context, 
 
 	if isVault {
 		if len(data) > 0 {
-			log.Info("sending vault tx", "data", fmt.Sprintf("%x", data), "vaultfrom", args.SharedWith, "sharedwith", args.SharedWith)
+			log.Info("sending vault tx", "data", fmt.Sprintf("%x", data), "vaultfrom", "", "sharedwith", args.SharedWith)
 		}
 	} else {
 		return common.Hash{}, fmt.Errorf("transaction is not vault type")

@@ -92,7 +92,7 @@ func SendVaultTransactionWithExtraCheck(args SendTxArgs) (d hexutil.Bytes, err e
 	//Send transaction Blackbox node
 	if len(data) > 0 {
 		log.Info("sending vault tx", "data", fmt.Sprintf("%x", data), "vaultfrom", args.VaultFrom, "sharedwith", args.SharedWith)
-		data, err = vault.VaultInstance.Post(data, args.VaultFrom, args.SharedWith)
+		data, err = vault.VaultInstance.PostRaw(data, args.VaultFrom, args.SharedWith)
 		log.Info("sent vault tx", "data", fmt.Sprintf("%x", data), "vaultfrom", args.VaultFrom, "sharedwith", args.SharedWith)
 		if err != nil {
 			return nil, err
@@ -112,7 +112,7 @@ func SendVaultTransaction(args SendTxArgs) (d hexutil.Bytes, err error) {
 	data := []byte(*args.Data)
 	if len(data) > 0 {
 		log.Info("sending vault tx", "data", fmt.Sprintf("%x", data), "VaultFrom", args.VaultFrom, "SharedWith", args.SharedWith)
-		data, err := vault.VaultInstance.Post(data, args.VaultFrom, args.SharedWith)
+		data, err := vault.VaultInstance.PostRaw(data, args.VaultFrom, args.SharedWith)
 		log.Info("sent vault tx", "data", fmt.Sprintf("%x", data), "VaultFrom", args.VaultFrom, "SharedWith", args.SharedWith)
 		if err != nil {
 			return nil, err
