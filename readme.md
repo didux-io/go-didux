@@ -28,7 +28,7 @@ The go-didux project comes with several wrappers/executables found in the `cmd` 
 
 ### Full node on the main Didux SPoRT network
 
-By far the most common scenario is people wanting to simply interact with the Didux Proof of Resource and Time (SPoRT) network:
+By far the most common scenario is people wanting to simply interact with the Smilo Proof of Resource and Time (SPoRT) network:
 create accounts; transfer funds; deploy and interact with contracts. For this particular use-case
 the user doesn't care about years-old historical data, so we can fast-sync quickly to the current
 state of the network. To do so:

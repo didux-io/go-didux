@@ -22,6 +22,7 @@ import (
 	"fmt"
 	"math/big"
 	"sort"
+	"sync"
 	"time"
 
 	"github.com/ethereum/go-ethereum/metrics"
@@ -72,6 +73,7 @@ type StateDB struct {
 	// This map holds 'live' objects, which will get modified while processing a state transition.
 	stateObjects      map[common.Address]*stateObject
 	stateObjectsDirty map[common.Address]struct{}
+	stateObjectMu     sync.RWMutex // storage insertion lock
 
 	// DB error.
 	// State objects are used by the consensus core and VM which are
@@ -372,7 +374,6 @@ func (self *StateDB) AddBalance(addr common.Address, amount *big.Int, blockNumbe
 	}
 }
 
-//
 func (self *StateDB) AddSmiloPay(addr common.Address, amount *big.Int) {
 	stateObject := self.GetOrNewStateObject(addr)
 	if stateObject != nil {
@@ -567,8 +568,8 @@ func (self *StateDB) createObject(addr common.Address) (newobj, prev *stateObjec
 // CreateAccount is called during the EVM CREATE operation. The situation might arise that
 // a contract does the following:
 //
-//   1. sends funds to sha(account ++ (nonce + 1))
-//   2. tx_create(sha(account ++ nonce)) (note that this gets the address of 1)
+//  1. sends funds to sha(account ++ (nonce + 1))
+//  2. tx_create(sha(account ++ nonce)) (note that this gets the address of 1)
 //
 // Carrying over the balance ensures that Ether doesn't disappear.
 func (self *StateDB) CreateAccount(addr common.Address) {
@@ -761,9 +762,11 @@ func (s *StateDB) Commit(deleteEmptyObjects bool) (root common.Hash, err error) 
 				stateObject.dirtyCode = false
 			}
 			// Write any storage changes in the state object to its storage trie.
+			s.stateObjectMu.Lock()
 			if err := stateObject.CommitTrie(s.db); err != nil {
 				return common.Hash{}, err
 			}
+			s.stateObjectMu.Unlock()
 			// Update the object in the main account trie.
 			s.updateStateObject(stateObject)
 		}

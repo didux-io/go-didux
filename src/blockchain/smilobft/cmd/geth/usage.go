@@ -34,6 +34,7 @@ import (
 var AppHelpTemplate = `NAME:
    {{.App.Name}} - {{.App.Usage}}
 
+   Copyright 2019-2022 The go-didux Authors
    Copyright 2018 The go-smilo Authors
    Copyright 2013-2018 The go-ethereum Authors
 

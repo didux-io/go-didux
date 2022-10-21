@@ -63,7 +63,7 @@ var (
 	gitCommit = ""
 	gitDate   = ""
 	// The app that holds all commands and flags.
-	app = utils.NewApp(gitCommit, gitDate, "the go-smilo command line interface")
+	app = utils.NewApp(gitCommit, gitDate, "the go-didux command line interface")
 	// flags that configure the node
 	nodeFlags = []cli.Flag{
 		utils.IdentityFlag,
@@ -212,7 +212,7 @@ func init() {
 	// Initialize the CLI app and start Geth
 	app.Action = geth
 	app.HideVersion = true // we have a command to print the version
-	app.Copyright = "Copyright 2013-2019 The go-ethereum Authors, Copyright 2018-2019 go-smilo Authors, Copyright 2019-2020 go-didux Authors"
+	app.Copyright = "Copyright 2013-2019 The go-ethereum Authors, Copyright 2018-2019 go-smilo Authors, Copyright 2019-2022 go-didux Authors"
 	app.Commands = []cli.Command{
 		// See chaincmd.go:
 		initCommand,

@@ -21,6 +21,7 @@ import (
 	"fmt"
 	"io"
 	"math/big"
+	"sync"
 	"time"
 
 	"github.com/ethereum/go-ethereum/metrics"
@@ -80,9 +81,13 @@ type stateObject struct {
 	trie Trie // storage trie, which becomes non-nil on first access
 	code Code // contract bytecode, which gets set when code is loaded
 
-	originStorage Storage // Storage cache of original entries to dedup rewrites
-	dirtyStorage  Storage // Storage entries that need to be flushed to disk
-	fakeStorage   Storage // Fake storage which constructed by caller for debugging purpose.
+	originStorage Storage      // Storage cache of original entries to dedup rewrites
+	dirtyStorage  Storage      // Storage entries that need to be flushed to disk
+	fakeStorage   Storage      // Fake storage which constructed by caller for debugging purpose.
+	storagemu     sync.RWMutex // Lockie
+
+	//storagemu sync.RWMutex // storage insertion lock
+	//vaultmu   sync.RWMutex // Vault lock
 
 	// Cache flags.
 	// When an object is marked suicided it will be delete from the trie
@@ -274,13 +279,17 @@ func (s *stateObject) updateTrie(db Database) Trie {
 	// Update all the dirty slots in the trie
 	tr := s.getTrie(db)
 	for key, value := range s.dirtyStorage {
+		s.storagemu.Lock()
 		delete(s.dirtyStorage, key)
+		s.storagemu.Unlock()
 
 		// Skip noop changes, persist actual changes
 		if value == s.originStorage[key] {
 			continue
 		}
+		s.storagemu.Lock()
 		s.originStorage[key] = value
+		s.storagemu.Unlock()
 
 		if (value == common.Hash{}) {
 			s.setError(tr.TryDelete(key[:]))

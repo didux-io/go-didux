@@ -1,13 +1,13 @@
 # Lines starting with '#' are comments.
 # Each line is a file pattern followed by one or more owners.
 
-accounts/usbwallet              @thomasmodeneis
-accounts/abi                    @thomasmodeneis
-consensus                       @thomasmodeneis
-core/                           @thomasmodeneis
-eth/                            @thomasmodeneis
-les/                            @thomasmodeneis
-light/                          @thomasmodeneis
-mobile/                         @thomasmodeneis
-p2p/                            @thomasmodeneis
-whisper/                        @thomasmodeneis
+accounts/usbwallet              @elkanroelen
+accounts/abi                    @elkanroelen
+consensus                       @elkanroelen
+core/                           @elkanroelen
+eth/                            @elkanroelen
+les/                            @elkanroelen
+light/                          @elkanroelen
+mobile/                         @elkanroelen
+p2p/                            @elkanroelen
+whisper/                        @elkanroelen

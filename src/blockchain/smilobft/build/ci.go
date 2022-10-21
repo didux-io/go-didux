@@ -14,6 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
 
+//go:build none
 // +build none
 
 /*
@@ -23,20 +24,20 @@ Usage: go run src/blockchain/smilobft/build/ci.go <command> <command flags/argum
 
 Available commands are:
 
-   install    [ -arch architecture ] [ -cc compiler ] [ packages... ]                          -- builds packages and executables
-   test       [ -coverage ] [ packages... ]                                                    -- runs the tests
-   lint                                                                                        -- runs certain pre-selected linters
-   archive    [ -arch architecture ] [ -type zip|tar ] [ -signer key-envvar ] [ -upload dest ] -- archives build artifacts
-   importkeys                                                                                  -- imports signing keys from env
-   debsrc     [ -signer key-id ] [ -upload dest ]                                              -- creates a debian source package
-   nsis                                                                                        -- creates a Windows NSIS installer
-   aar        [ -local ] [ -sign key-id ] [-deploy repo] [ -upload dest ]                      -- creates an Android archive
-   xcode      [ -local ] [ -sign key-id ] [-deploy repo] [ -upload dest ]                      -- creates an iOS XCode framework
-   xgo        [ -alltools ] [ options ]                                                        -- cross builds according to options
-   purge      [ -store blobstore ] [ -days threshold ]                                         -- purges old archives from the blobstore
+	install    [ -arch architecture ] [ -cc compiler ] [ packages... ]                          -- builds packages and executables
+	test       [ -coverage ] [ packages... ]                                                    -- runs the tests
+	lint                                                                                        -- runs certain pre-selected linters
+	archive    [ -arch architecture ] [ -type zip|tar ] [ -signer key-envvar ] [ -upload dest ] -- archives build artifacts
+	importkeys                                                                                  -- imports signing keys from env
+	debsrc     [ -signer key-id ] [ -upload dest ]                                              -- creates a debian source package
+	nsis                                                                                        -- creates a Windows NSIS installer
+	aar        [ -local ] [ -sign key-id ] [-deploy repo] [ -upload dest ]                      -- creates an Android archive
+	xcode      [ -local ] [ -sign key-id ] [-deploy repo] [ -upload dest ]                      -- creates an iOS XCode framework
+	xgo        [ -alltools ] [ options ]                                                        -- cross builds according to options
+	purge      [ -store blobstore ] [ -days threshold ]                                         -- purges old archives from the blobstore
+	rename                                                                                      -- rename to go-didux binaries
 
 For all commands, -n prevents execution of external programs (dry run mode).
-
 */
 package main
 
@@ -85,58 +86,58 @@ var (
 	// A debian package is created for all executables listed here.
 	debExecutables = []debExecutable{
 		{
-			BinaryName:  "sabigen",
+			BinaryName:  "dabigen",
 			Description: "Source code generator to convert Didux contract definitions into easy to use, compile-time type-safe Go packages.",
 		},
 		{
-			BinaryName:  "sbootnode",
-			Description: "Ethereum bootnode.",
+			BinaryName:  "dbootnode",
+			Description: "Didux bootnode.",
 		},
 		{
-			BinaryName:  "sevm",
+			BinaryName:  "devm",
 			Description: "Developer utility version of the Didux EVM (Ethereum Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode.",
 		},
 		{
-			BinaryName:  "sgeth",
+			BinaryName:  "dgeth",
 			Description: "Didux CLI client.",
 		},
 		{
-			BinaryName:  "spuppeth",
+			BinaryName:  "dpuppeth",
 			Description: "Didux private network manager.",
 		},
 		{
-			BinaryName:  "srlpdump",
+			BinaryName:  "drlpdump",
 			Description: "Didux Developer utility tool that prints RLP structures.",
 		},
 		{
-			BinaryName:  "swnode",
+			BinaryName:  "dwnode",
 			Description: "Didux Whisper diagnostic tool",
 		},
 		{
-			BinaryName:  "sclef",
+			BinaryName:  "dclef",
 			Description: "Didux account management tool.",
 		},
 		{
-			BinaryName:  "extradata",
+			BinaryName:  "dextradata",
 			Description: "Didux extradata management tool.",
 		},
 		{
-			BinaryName:  "smiloutils",
+			BinaryName:  "diduxutils",
 			Description: "Didux utils tool.",
 		},
 	}
 
 	// A debian package is created for all executables listed here.
 
-	debSmilo = debPackage{
-		Name:        "smilo",
-		Version:     params.SmiloVersion,
+	debDidux = debPackage{
+		Name:        "didux",
+		Version:     params.DiduxVersion,
 		Executables: debExecutables,
 	}
 
 	// Debian meta packages to build and push to Ubuntu PPA
 	debPackages = []debPackage{
-		debSmilo,
+		debDidux,
 	}
 
 	// Distros for which packages are created.
@@ -188,6 +189,8 @@ func main() {
 		doXgo(os.Args[2:])
 	case "purge":
 		doPurge(os.Args[2:])
+	case "rename":
+		doRename(true)
 	default:
 		log.Fatal("unknown command ", os.Args[1])
 	}
@@ -296,16 +299,16 @@ func doRename(rename bool) {
 			os.Rename(filepath.Join(GOBIN, "clef"), filepath.Join(GOBIN, "didux-clef"))
 		}
 
-		if _, err := os.Stat(filepath.Join(GOBIN, "geth")); !os.IsNotExist(err) {
+		if _, err := os.Stat(filepath.Join(GOBIN, "geth-linux-amd64")); !os.IsNotExist(err) {
 			os.Rename(filepath.Join(GOBIN, "geth-linux-amd64"), filepath.Join(GOBIN, "go-didux-linux-amd64"))
 		}
-		if _, err := os.Stat(filepath.Join(GOBIN, "geth")); !os.IsNotExist(err) {
+		if _, err := os.Stat(filepath.Join(GOBIN, "geth-darwin-10.6-amd64")); !os.IsNotExist(err) {
 			os.Rename(filepath.Join(GOBIN, "geth-darwin-10.6-amd64"), filepath.Join(GOBIN, "go-didux-darwin-10.6-amd64"))
 		}
-		if _, err := os.Stat(filepath.Join(GOBIN, "geth")); !os.IsNotExist(err) {
-			os.Rename(filepath.Join(GOBIN, "geth-linux-7"), filepath.Join(GOBIN, "go-didux-linux-7"))
+		if _, err := os.Stat(filepath.Join(GOBIN, "geth-linux-arm-7")); !os.IsNotExist(err) {
+			os.Rename(filepath.Join(GOBIN, "geth-linux-arm-7"), filepath.Join(GOBIN, "go-didux-linux-arm-7"))
 		}
-		if _, err := os.Stat(filepath.Join(GOBIN, "geth")); !os.IsNotExist(err) {
+		if _, err := os.Stat(filepath.Join(GOBIN, "geth-linux-arm64")); !os.IsNotExist(err) {
 			os.Rename(filepath.Join(GOBIN, "geth-linux-arm64"), filepath.Join(GOBIN, "go-didux-linux-arm64"))
 		}
 		fmt.Println("**** Done renaming geth files to Didux custom ****")
@@ -835,7 +838,7 @@ func doAndroidArchive(cmdline []string) {
 	}
 	// Build the Android archive and Maven resources
 	build.MustRun(goTool("get", "golang.org/x/mobile/cmd/gomobile", "golang.org/x/mobile/cmd/gobind"))
-	build.MustRun(gomobileTool("bind", "-ldflags", "-s -w", "--target", "android", "--javapkg", "org.smilo", "-v", "go-didux/src/blockchain/smilobft/mobile"))
+	build.MustRun(gomobileTool("bind", "-ldflags", "-s -w", "--target", "android", "--javapkg", "io.didux", "-v", "go-didux/src/blockchain/smilobft/mobile"))
 
 	if *local {
 		// If we're building locally, copy bundle to build dir and skip Maven
