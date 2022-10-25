@@ -23,13 +23,13 @@ import (
 const (
 	VersionMajor = 1        // Major version component of the current release
 	VersionMinor = 9        // Minor version component of the current release
-	VersionPatch = 2        // Patch version component of the current release
+	VersionPatch = 3        // Patch version component of the current release
 	VersionMeta  = "stable" // Version metadata to append to the version string
 
 	DiduxVersionMajor = 1
 	DiduxVersionMinor = 9
-	DiduxVersionPatch = 2
-	DiduxMinorPatch   = 1
+	DiduxVersionPatch = 3
+	DiduxMinorPatch   = 0
 )
 
 // Version holds the textual version string.

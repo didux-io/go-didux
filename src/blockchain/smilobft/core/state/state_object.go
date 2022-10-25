@@ -84,10 +84,7 @@ type stateObject struct {
 	originStorage Storage      // Storage cache of original entries to dedup rewrites
 	dirtyStorage  Storage      // Storage entries that need to be flushed to disk
 	fakeStorage   Storage      // Fake storage which constructed by caller for debugging purpose.
-	storagemu     sync.RWMutex // Lockie
-
-	//storagemu sync.RWMutex // storage insertion lock
-	//vaultmu   sync.RWMutex // Vault lock
+	storagemu     sync.RWMutex // storage insertion lock
 
 	// Cache flags.
 	// When an object is marked suicided it will be delete from the trie

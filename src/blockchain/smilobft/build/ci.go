@@ -98,7 +98,7 @@ var (
 			Description: "Developer utility version of the Didux EVM (Ethereum Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode.",
 		},
 		{
-			BinaryName:  "dgeth",
+			BinaryName:  "go-didux",
 			Description: "Didux CLI client.",
 		},
 		{
