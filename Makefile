@@ -109,7 +109,7 @@ format:  # Formats the code. Must have goimports installed (use make install-lin
 all:
 	src/blockchain/smilobft/build/env.sh go run ./src/blockchain/smilobft/build/ci.go install
 
-eth: clean
+didux: clean
 	src/blockchain/smilobft/build/env.sh go run ./src/blockchain/smilobft/build/ci.go install
 
 test-eth: eth
@@ -120,6 +120,8 @@ unlink:
 
 geth-link: unlink eth
 	sudo ln -s  /opt/gocode/src/go-smilo/build/bin/geth /usr/local/bin/geth  || true
+
+go-didux: geth
 
 geth: eth
 	@echo "Done building."
